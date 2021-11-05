@@ -3,7 +3,7 @@ import halfmoon from 'halfmoon';
 
 const Navbar = () => {
     return (
-        <div className='navbar'>
+        <div className='navbar justify-content-between'>
             <div className='navbar-content'>
                 <div className='navbar-brand'>
                     <a href="#">Zach Yarbrough</a>
@@ -16,7 +16,7 @@ const Navbar = () => {
                         <a href='#' className='nav-link'>Resume</a>
                     </li>
                 </ul>
-                <button className='fa fa-moon-o btn btn-primary' type='button' onClick={() => halfmoon.toggleDarkMode()}></button>
+                <button className='fa fa-moon btn btn-primary' type='button' onClick={() => halfmoon.toggleDarkMode()}></button>
             </div>
         </div>
     );
