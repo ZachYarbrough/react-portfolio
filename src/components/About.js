@@ -5,7 +5,7 @@ const About = () => {
         <div className="content-wrapper">
             <div>
                 <h1>Zach Yarbrough</h1>
-                <p className='code'>Hello, I am a Full Stack Developer based in Austin, Tx</p>
+                <p className='badge p-5'>Hello, I am a Full Stack Developer based in Austin, Tx</p>
             </div>
             <div>
                 <h2>Bio</h2>

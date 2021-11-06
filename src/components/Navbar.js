@@ -1,15 +1,40 @@
-import React from 'react';
-import { toggleDarkMode } from 'halfmoon';
+import React, { useState, useEffect } from 'react';
+import halfmoon from 'halfmoon';
 
 const Navbar = () => {
 
     const handleDropDown = (event) => {
-        if(event.target.classList.contains('btn')) {
-            event.target.classList.toggle('active');
-            event.target.parentNode.classList.toggle('show');
+        const dropdownBtn = document.querySelector('[data-toggle=dropdown]');
+        const dropdown = document.querySelector('.dropdown');
+        if (event.target === dropdownBtn || event.target === dropdown || event.target.classList.contains('fa-bars')) {
+            dropdownBtn.classList.toggle('active');
+            dropdown.classList.toggle('show');
+        } else if (dropdown.classList.contains('show') && !event.target.classList.contains('is-dropdown')) {
+            dropdownBtn.classList.toggle('active');
+            dropdown.classList.toggle('show');
+        }
+    }
+
+
+    useEffect(() => {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && darkModeBtn === '') {
+            handleDarkMode();
+            halfmoon.toggleDarkMode();
+          }
+        document.addEventListener("mousedown", handleDropDown);
+        return () => {
+            document.removeEventListener("mousedown", handleDropDown);
+        };
+    });
+
+    const [darkModeBtn, setDarkModeBtn] = useState('');
+
+    const handleDarkMode = () => {
+        const darkModeBtnEl = document.querySelector('.dark-mode-icon');
+        if (!darkModeBtnEl.classList.contains('fa-sun')) {
+            setDarkModeBtn('fa-sun');
         } else {
-            event.target.classList.toggle('active');
-            event.target.parentNode.parentNode.classList.toggle('show');
+            setDarkModeBtn('fa-moon');
         }
     }
 
@@ -31,7 +56,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#' className='nav-link'>
+                        <a href='https://github.com/ZachYarbrough/react-portfolio' target="_" className='nav-link'>
                             <i className='fa fa-code-fork mr-5' />
                             <span>Source</span>
                         </a>
@@ -40,28 +65,31 @@ const Navbar = () => {
             </div>
 
             <div className='navbar-content ml-auto'>
-                <button className='btn btn-square' type='button' onClick={toggleDarkMode}>
-                    <i className='far fa-moon' aria-hidden="true"/>
+                <button className='btn btn-square' type='button' onClick={() => {
+                    handleDarkMode();
+                    halfmoon.toggleDarkMode();
+                }}>
+                    <i className={`far ${darkModeBtn} dark-mode-icon`} aria-hidden="true" />
                     <span className="sr-only">Toggle dark mode</span>
                 </button>
             </div>
 
             <div className="navbar-content d-md-none">
                 <div className="dropdown">
-                    <button className="btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1" onClick={handleDropDown}>
+                    <button className="btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1">
                         <i className="fa fa-bars" aria-hidden="true"></i>
                     </button>
                     <div className="dropdown-menu dropdown-menu-right w-200" aria-labelledby="navbar-dropdown-toggle-btn-1">
-                        <a href="#" className="dropdown-item">About</a>
-                        <a href="#" className="dropdown-item">Work</a>
-                        <a href="#" className="dropdown-item">Contact</a>
-                        <a href="#" className="dropdown-item">
-                            <i className='far fa-file-text mr-5' aria-hidden='true'/>
-                            <span>Resume</span>
+                        <a href="#" className="dropdown-item is-dropdown">About</a>
+                        <a href="#" className="dropdown-item is-dropdown">Work</a>
+                        <a href="#" className="dropdown-item is-dropdown">Contact</a>
+                        <a href="#" className="dropdown-item is-dropdown">
+                            <i className='far fa-file-text mr-5 is-dropdown' aria-hidden='true' />
+                            <span className='is-dropdown'>Resume</span>
                         </a>
-                        <a href="https://github.com/ZachYarbrough/react-portfolio" target='_' className="dropdown-item">
-                            <i className='fa fa-code-fork mr-5' aria-hidden='true'/>
-                            <span>Source</span>
+                        <a href="https://github.com/ZachYarbrough/react-portfolio" target='_' className="dropdown-item is-dropdown">
+                            <i className='fa fa-code-fork mr-5 is-dropdown' aria-hidden='true' />
+                            <span className='is-dropdown'>Source</span>
                         </a>
                     </div>
                 </div>

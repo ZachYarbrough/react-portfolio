@@ -2,6 +2,16 @@
     --primary-color: #81E6D9;
 }
 
-@media screen and (min-width: 600px) {
+.navbar {
+    background-color: #ffffffb8;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
 
+.dark-mode .navbar {
+    background-color: #25282cb8;
+    background-image: none;
+    border: none;
+    box-shadow: none;
 }
