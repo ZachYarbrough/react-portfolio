@@ -61,19 +61,19 @@ const About = (props) => {
 
                 <div className='d-sm-none d-flex flex-column'>
                     <div className='mt-20 mb-10'>
-                        <a className='alert alert-success mt-10'>
+                        <a href='#' target='_' className='alert alert-success mt-10'>
                             <i className='fa-brands fa-github mr-5'></i>
                             <span>@ZachYarbrough</span>
                         </a>
                     </div>
                     <div className='mt-20 mb-10'>
-                        <a className='alert alert-success mt-10'>
+                        <a href='#' target='_' className='alert alert-success mt-10'>
                             <i className='fa-brands fa-linkedin mr-5'></i>
                             <span>@ZachYarbrough</span>
                         </a>
                     </div>
                     <div className='mt-20 mb-10'>
-                        <a className='alert alert-success mt-10'>
+                        <a href='#' target='_' className='alert alert-success mt-10'>
                             <i className='fa-regular fa-envelope mr-5'></i>
                             <span>@ZachYarbrough</span>
                         </a>

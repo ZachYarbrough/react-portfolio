@@ -3,8 +3,8 @@ import React, { useEffect } from 'react';
 const Footer = () => {
     return (
         <div className='content d-flex justify-content-between'>
-            <p className='text-muted'>© 2021 Zach Yarbrough. All Rights Reserved.</p>
-            <ul className='mt-10 font-size-18 text-muted'>
+            <p className='text-muted mt-20'>© 2021 Zach Yarbrough. All Rights Reserved.</p>
+            <ul className='mt-15 font-size-18 text-muted'>
                     <a className='mr-5 text-muted' data-toggle="tooltip" data-title="Github" href='#'>
                         <i className='fa-brands fa-github-square'></i>
                     </a>

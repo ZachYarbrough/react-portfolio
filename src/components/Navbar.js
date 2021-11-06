@@ -43,7 +43,7 @@ const Navbar = (props) => {
     });
 
     return (
-        <nav className='navbar justify-content-between'>
+        <nav className='navbar'>
             <div className='navbar-content'>
                 <a onClick={() => setWorkSelected(false) } className='navbar-brand'>Zach Yarbrough</a>
                 <ul className='navbar-nav d-none d-sm-flex'>
