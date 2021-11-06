@@ -1,6 +1,7 @@
 import About from './components/About';
 import Navbar from './components/Navbar';
-import "halfmoon/css/halfmoon-variables.min.css";
+import 'halfmoon/css/halfmoon-variables.min.css';
+import './App.css'
 
 function App() {
   return (
