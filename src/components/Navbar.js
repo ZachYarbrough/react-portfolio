@@ -45,16 +45,13 @@ const Navbar = (props) => {
     return (
         <nav className='navbar justify-content-between'>
             <div className='navbar-content'>
-                <a href='#' onClick={() => setWorkSelected(false)} className='navbar-brand'>Zach Yarbrough</a>
-                <ul className='navbar-nav d-none d-md-flex'>
+                <a onClick={() => setWorkSelected(false) } className='navbar-brand'>Zach Yarbrough</a>
+                <ul className='navbar-nav d-none d-sm-flex'>
                     <li className={`nav-item ${workSelected && 'navActive'}`}>
-                        <a href='#work' onClick={() => setWorkSelected(true)} className='nav-link'>Work</a>
+                        <a onClick={() => setWorkSelected(true) } className='nav-link'>Work</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#' className='nav-link'>Contact</a>
-                    </li>
-                    <li className='nav-item'>
-                        <a href='#' className='nav-link'>
+                        <a className='nav-link'>
                             <i className='far fa-file-text mr-5' />
                             <span>Resume</span>
                         </a>
@@ -78,15 +75,14 @@ const Navbar = (props) => {
                 </button>
             </div>
 
-            <div className="navbar-content d-md-none">
+            <div className="navbar-content d-sm-none">
                 <div className="dropdown">
                     <button className="btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1">
                         <i className="fa fa-bars" aria-hidden="true"></i>
                     </button>
                     <div className="dropdown-menu dropdown-menu-right w-200 z-50" aria-labelledby="navbar-dropdown-toggle-btn-1">
-                        <a href="#" onClick={() => setWorkSelected(false)} className="dropdown-item is-dropdown">About</a>
-                        <a href="#work" onClick={() => setWorkSelected(true)} className="dropdown-item is-dropdown">Work</a>
-                        <a href="#" className="dropdown-item is-dropdown">Contact</a>
+                        <a onClick={() => setWorkSelected(false)} className="dropdown-item is-dropdown">About</a>
+                        <a onClick={() => setWorkSelected(true)} className="dropdown-item is-dropdown">Work</a>
                         <a href="#" className="dropdown-item is-dropdown">
                             <i className='far fa-file-text mr-5 is-dropdown' aria-hidden='true' />
                             <span className='is-dropdown'>Resume</span>

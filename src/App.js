@@ -10,13 +10,14 @@ function App() {
   const [workSelected, setWorkSelected] = useState(false);
 
   return (
-    <div className="page-wrapper with-navbar">
+    <div className="page-wrapper with-navbar with-navbar-fixed-bottom">
       <Navbar workSelected={workSelected} setWorkSelected={setWorkSelected} />
-      <main className='content-wrapper ml-20 mr-20'>
-        {!workSelected ? (
-          <About workSelected={workSelected} setWorkSelected={setWorkSelected} />
-        ) : (
+      <main className='content-wrapper'>
+
+        {workSelected ? (
           <Work />
+        ) : (
+          <About workSelected={workSelected} setWorkSelected={setWorkSelected} />
         )}
         <Footer />
       </main>
