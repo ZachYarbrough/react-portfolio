@@ -3,9 +3,144 @@ import FadeIn from 'react-fade-in';
 
 const Resume = () => {
     return (
-        <FadeIn className="content">
-            <iframe src="assets/Zach\ Yarbrough\ Resume.pdf"></iframe>
-            <button className='btn btn-primary ml-auto'>Download</button>
+        <FadeIn className='content'>
+            {/* Summary */}
+            <div>
+                <h2 className='font-size-24 font-weight-bold border-bottom'>Summary</h2>
+                <p>Ambitious Full Stack Developer with a background in UI/UX</p>
+                <p>Adept in Test Driven Development and Object Oriented Design allowing for clean, concise code</p>
+                <p>Proficient in Agile Scrum Methodology; flexible, fast learner that brings curiosity and passion to every project</p>
+            </div>
+
+            {/* Skills */}
+            <div>
+                <h2 className='font-size-24 font-weight-bold border-bottom'>Skills</h2>
+                <p className='d-flex align-items-start'>
+                    <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Languages</span>
+                    <div className='d-flex flex-wrap'>
+                        <span className="alert mt-5 mr-5 py-0 px-5">HTML</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">CSS</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">JavaScript</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">C#</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Swift</span>
+                    </div>
+                </p>
+                <p className='d-flex align-items-start'>
+                    <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Technical</span>
+                    <div className='d-flex flex-wrap'>
+                        <span className="alert mt-5 mr-5 py-0 px-5">React</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Git</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">NodeJS</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">ExpressJS</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">MongoDB</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Jest</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Bootstrap</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">AJAX</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">MySQL</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Handlebars</span>
+                    </div>
+                </p>
+                <p className='d-flex align-items-start'>
+                    <span className='nowrap-div alert alert-primary mt-5 mr-5 py-0 px-5'>Non Technical</span>
+                    <div className='d-flex flex-wrap'>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Agile Scrum Methodology</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Object Oriented Design</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Flexible Learner</span>
+                        <span className="alert mt-5 mr-5 py-0 px-5">Model View Controller</span>
+                    </div>
+                </p>
+            </div>
+
+            {/* Projects */}
+            <div>
+                <h2 className='font-size-24 font-weight-bold border-bottom'>Projects</h2>
+                <div>
+                    <p className='d-flex align-items-start'>
+                        <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Reploy - Job Tracking Application</span>
+                    </p>
+                    <p className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
+                        <a href='https://reploy.herokuapp.com/' target='_'>
+                            <span className='mr-5'>https://reploy.herokuapp.com</span>
+                            <i className='fa fa-external-link-alt' aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <p className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10 py-0 px-5'>Source</span>
+                        <a href='https://github.com/abjj1999/Job-Tracker' target='_'>
+                            <span className='mr-5'>https://github.com/abjj1999/Job-Tracker</span>
+                            <i className='fa fa-external-link-alt' aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <p className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-5 py-0 px-5'>Stack</span>
+                        <div className='d-flex flex-wrap'>
+                            <span className="alert mr-5 py-0 px-5">Handlebars</span>
+                            <span className="alert mr-5 py-0 px-5">MySQL</span>
+                            <span className="alert mr-5 py-0 px-5">ExpressJS</span>
+                            <span className="alert mr-5 py-0 px-5">NodeJS</span>
+                        </div>
+                    </p>
+                </div>
+                <div>
+                    <p className='d-flex align-items-start'>
+                        <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Lyricado - Music Lyric Quiz</span>
+                    </p>
+                    <p className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
+                        <a href=' https://zachyarbrough.github.io/music-lyric-quiz/' target='_'>
+                            <span className='mr-5'> https://zachyarbrough.github.io/music-lyric-quiz</span>
+                            <i className='fa fa-external-link-alt' aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <p className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10 py-0 px-5'>Source</span>
+                        <a href='https://github.com/ZachYarbrough/music-lyric-quiz' target='_'>
+                            <span className='mr-5'>https://github.com/ZachYarbrough/music-lyric-quiz</span>
+                            <i className='fa fa-external-link-alt' aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <p className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-5 py-0 px-5'>Stack</span>
+                        <div className='d-flex flex-wrap'>
+                            <span className="alert mr-5 py-0 px-5">HTML</span>
+                            <span className="alert mr-5 py-0 px-5">CSS</span>
+                            <span className="alert mr-5 py-0 px-5">JavaScript</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+
+            {/* Experience */}
+            <div>
+                <h2 className='font-size-24 font-weight-bold border-bottom'>Experience</h2>
+                <p className='d-flex align-items-start'>
+                    <span className='alert alert-primary mr-10 py-0 px-5'>Storyfit Internship <br /> Jan 2020 - May 2020</span>
+                    <span>Utilized critical thinking to regulate movie scripts and format them correctly to ensure AI runs smoothly when determining optimal markets and audience</span>
+                </p>
+            </div>
+
+            {/* Education */}
+            <div>
+                <h2 className='font-size-24 font-weight-bold border-bottom'>Education</h2>
+                <p className='d-flex align-items-start'>
+                    <span className='alert alert-primary mr-10 py-0 px-5'>BSA in Arts and Entertainment Technologies <br /> University of Texas at Austin<br /> Aug 2017 - May 2021</span>
+                    <span>Graduated with a GPA of 3.51 with a concentration in Game Design and a Certificate in Radio Television and Film</span>
+                </p>
+                <p className='d-flex align-items-start'>
+                    <span className='alert alert-primary mr-10 py-0 px-5'>Bootcamp Certificate <br /> University of Texas at Austin<br /> May 2021 - Dec 2021</span>
+                    <span>A 24-week intensive program focused on gaining technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handelbars.js &amp; ReactJS.</span>
+                </p>
+            </div>
+
+            {/* Honors and Awards */}
+            <div>
+                <h2 className='font-size-24 font-weight-bold border-bottom'>Honors and Awards</h2>
+                <p className='d-flex align-items-start'>
+                    <span className='alert alert-primary mr-10 py-0 px-5'>Eagle Scout <br /> Sept 2014</span>
+                    <span>Council Number #576</span>
+                </p>
+            </div>
         </FadeIn>
     );
 }

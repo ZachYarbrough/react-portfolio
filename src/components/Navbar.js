@@ -5,7 +5,9 @@ const Navbar = (props) => {
 
     const {
         workSelected,
-        setWorkSelected
+        setWorkSelected,
+        resumeSelected,
+        setResumeSelected
     } = props;
 
     const handleDropDown = (event) => {
@@ -45,17 +47,28 @@ const Navbar = (props) => {
     return (
         <nav className='navbar'>
             <div className='navbar-content'>
-                <a onClick={() => setWorkSelected(false) } className='navbar-brand'>Zach Yarbrough</a>
+                <a onClick={() => {
+                    setWorkSelected(false);
+                    setResumeSelected(false);
+                }} className='navbar-brand'>Zach Yarbrough</a>
                 <ul className='navbar-nav d-none d-sm-flex'>
                     <li className={`nav-item ${workSelected && 'navActive'}`}>
-                        <a onClick={() => setWorkSelected(true) } className='nav-link'>Work</a>
+                        <a onClick={() => {
+                            setWorkSelected(true);
+                            setResumeSelected(false);
+                        }} className='nav-link'>
+                            <span>Work</span>
+                        </a>
                     </li>
-                    {/* <li className='nav-item'>
-                        <a className='nav-link'>
+                    <li className='nav-item'>
+                        <a onClick={() => {
+                            setWorkSelected(false);
+                            setResumeSelected(true);
+                        }} className='nav-link'>
                             <i className='far fa-file-text mr-5' />
                             <span>Resume</span>
                         </a>
-                    </li> */}
+                    </li>
                     <li className='nav-item'>
                         <a href='https://github.com/ZachYarbrough/react-portfolio' target="_" className='nav-link'>
                             <i className='fa fa-code-fork mr-5' />
@@ -81,12 +94,21 @@ const Navbar = (props) => {
                         <i className="fa fa-bars" aria-hidden="true"></i>
                     </button>
                     <div className="dropdown-menu dropdown-menu-right w-200 z-50" aria-labelledby="navbar-dropdown-toggle-btn-1">
-                        <a onClick={() => setWorkSelected(false)} className="dropdown-item is-dropdown">About</a>
-                        <a onClick={() => setWorkSelected(true)} className="dropdown-item is-dropdown">Work</a>
-                        {/* <a href="#" className="dropdown-item is-dropdown">
+                        <a onClick={() => {
+                            setWorkSelected(false);
+                            setResumeSelected(false);
+                        }} className="dropdown-item is-dropdown">About</a>
+                        <a onClick={() => {
+                            setWorkSelected(true);
+                            setResumeSelected(false);
+                        }} className="dropdown-item is-dropdown">Work</a>
+                        <a onClick={() => {
+                            setWorkSelected(false);
+                            setResumeSelected(true);
+                        }} className="dropdown-item is-dropdown">
                             <i className='far fa-file-text mr-5 is-dropdown' aria-hidden='true' />
                             <span className='is-dropdown'>Resume</span>
-                        </a> */}
+                        </a>
                         <a href="https://github.com/ZachYarbrough/react-portfolio" target='_' className="dropdown-item is-dropdown">
                             <i className='fa fa-code-fork mr-5 is-dropdown' aria-hidden='true' />
                             <span className='is-dropdown'>Source</span>

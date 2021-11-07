@@ -5,43 +5,11 @@ import halfmoon from 'halfmoon';
 const About = (props) => {
 
     const {
-        workSelected,
-        setWorkSelected,
-        toastAlert
+        setWorkSelected
     } = props;
 
     return (
         <FadeIn className='content'>
-            {/* About Header */}
-            <div className='d-sm-flex d-none'>
-                <div>
-                    <h1 className='mb-0'>Zach Yarbrough</h1>
-                    <a href="assets/zach-yarbrough-resume.pdf" download onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} className="download-resume badge-group" role="group" aria-label="...">
-                        <span class="badge">Full Stack Developer based in Austin</span>
-                        <span class="badge badge-primary">
-                            <i className='fa fa-download mr-5'></i>
-                            <span>Download Resume</span>
-                        </span>
-                    </a>
-                </div>
-                <img src='assets/images/profile-image.jpeg' className="ml-auto mr-20 img-fluid border rounded-circle w-100 h-100" alt="Profile Image" />
-            </div>
-
-            {/* About Header - Small */}
-            <div className='d-sm-none d-flex flex-column'>
-                <div>
-                    <h1 className='mb-0'>Zach Yarbrough</h1>
-                    <a href="assets/zach-yarbrough-resume.pdf" download onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} class="badge-group" role="group" aria-label="...">
-                        <span class="badge">Full Stack Developer based in Austin</span>
-                        <span class="badge badge-primary">
-                            <i className='fa fa-download mr-5'></i>
-                            <span>Download Resume</span>
-                        </span>
-                    </a>
-                </div>
-                <img src='assets/images/profile-image.jpeg' className="mx-auto mt-20 mb-0 img-fluid border rounded-circle w-100 h-100" alt="Profile Image" />
-            </div>
-
             {/* Bio */}
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Bio</h2>
@@ -54,44 +22,7 @@ const About = (props) => {
                     <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
                 </a>
             </div>
-            {/* Skills */}
-            <div>
-                <h2 className='font-size-24 font-weight-bold border-bottom'>Skills</h2>
-                <p className='d-flex align-items-start'>
-                    <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Languages</span>
-                    <div className='d-flex flex-wrap'>
-                        <span class="alert mt-5 mr-5 py-0 px-5">HTML</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">CSS</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">JavaScript</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">C#</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Swift</span>
-                    </div>
-                </p>
-                <p className='d-flex align-items-start'>
-                    <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Technical</span>
-                    <div className='d-flex flex-wrap'>
-                        <span class="alert mt-5 mr-5 py-0 px-5">React</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Git</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Node</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Express</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">MongoDB</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Jest</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Bootstrap</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">AJAX</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">MySQL</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Handlebars</span>
-                    </div>
-                </p>
-                <p className='d-flex align-items-start'>
-                    <span className='nowrap-div alert alert-primary mt-5 mr-5 py-0 px-5'>Non Technical</span>
-                    <div className='d-flex flex-wrap'>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Agile Scrum Methodology</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Object Oriented Design</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Flexible Learner</span>
-                        <span class="alert mt-5 mr-5 py-0 px-5">Model View Controller</span>
-                    </div>
-                </p>
-            </div>
+
             {/* Contact */}
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Contact Me</h2>
@@ -112,13 +43,13 @@ const About = (props) => {
 
                 <div className='d-sm-none d-flex flex-column'>
                     <div className='mt-20 mb-10'>
-                        <a href='https://github.com/ZachYarbrough' target='_' className='btn btn-block btn-primary text-white font-weight-bold'>
+                        <a href='https://github.com/ZachYarbrough' target='_' className='btn btn-block btn-primary font-weight-bold'>
                             <i className='fa-brands fa-github mr-5'></i>
                             <span>@ZachYarbrough</span>
                         </a>
                     </div>
                     <div className='mt-20 mb-10'>
-                        <a href='https://www.linkedin.com/in/zachary-yarbrough-7518351a2/' target='_' className='btn btn-block btn-primary text-white font-weight-bold'>
+                        <a href='https://www.linkedin.com/in/zachary-yarbrough-7518351a2/' target='_' className='btn btn-block btn-primary font-weight-bold'>
                             <i className='fa-brands fa-linkedin mr-5'></i>
                             <span>@ZachYarbrough</span>
                         </a>
