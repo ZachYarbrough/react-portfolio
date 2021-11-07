@@ -63,6 +63,16 @@
     box-shadow: none;
 }
 
+.dark-mode .navActive span,
+.dark-mode .navActive i {
+    color: var(--dm-link-text-color-hover);
+}
+
+.navActive span,
+.navActive i {
+    color: var(--lm-link-text-color-hover);
+}
+
 .nav-link {
     padding-bottom: 1px;
 }

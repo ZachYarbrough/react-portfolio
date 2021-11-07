@@ -7,7 +7,9 @@ const Navbar = (props) => {
         workSelected,
         setWorkSelected,
         resumeSelected,
-        setResumeSelected
+        setResumeSelected,
+        projectSelected,
+        setProjectSelected
     } = props;
 
     const handleDropDown = (event) => {
@@ -50,20 +52,23 @@ const Navbar = (props) => {
                 <a onClick={() => {
                     setWorkSelected(false);
                     setResumeSelected(false);
+                    setProjectSelected(false);
                 }} className='navbar-brand'>Zach Yarbrough</a>
                 <ul className='navbar-nav d-none d-sm-flex'>
                     <li className={`nav-item ${workSelected && 'navActive'}`}>
                         <a onClick={() => {
                             setWorkSelected(true);
                             setResumeSelected(false);
+                            setProjectSelected(false);
                         }} className='nav-link'>
                             <span>Work</span>
                         </a>
                     </li>
-                    <li className='nav-item'>
+                    <li className={`nav-item ${resumeSelected && 'navActive'}`}>
                         <a onClick={() => {
                             setWorkSelected(false);
                             setResumeSelected(true);
+                            setProjectSelected(false);
                         }} className='nav-link'>
                             <i className='far fa-file-text mr-5' />
                             <span>Resume</span>
@@ -97,14 +102,17 @@ const Navbar = (props) => {
                         <a onClick={() => {
                             setWorkSelected(false);
                             setResumeSelected(false);
+                            setProjectSelected(false);
                         }} className="dropdown-item is-dropdown">About</a>
                         <a onClick={() => {
                             setWorkSelected(true);
                             setResumeSelected(false);
+                            setProjectSelected(false);
                         }} className="dropdown-item is-dropdown">Work</a>
                         <a onClick={() => {
                             setWorkSelected(false);
                             setResumeSelected(true);
+                            setProjectSelected(false);
                         }} className="dropdown-item is-dropdown">
                             <i className='far fa-file-text mr-5 is-dropdown' aria-hidden='true' />
                             <span className='is-dropdown'>Resume</span>
