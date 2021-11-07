@@ -6,31 +6,21 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import Work from './components/Work';
 import Footer from './components/Footer';
+import StickyAlerts from './components/StickyAlerts';
 
 function App() {
   const [workSelected, setWorkSelected] = useState(false);
 
-  const toastAlert = () => {
-    let alertContent = "You have successfully downloaded my resume.";
-
-    halfmoon.initStickyAlert({
-      title: "Resume Downloaded",
-      content: alertContent
-    })
-  }
-
   return (
     <div className="page-wrapper with-navbar">
-      <div class="sticky-alerts">
-        
-      </div>
+      <StickyAlerts />
       <Navbar workSelected={workSelected} setWorkSelected={setWorkSelected} />
       <main className='content-wrapper'>
 
         {workSelected ? (
           <Work />
         ) : (
-          <About workSelected={workSelected} setWorkSelected={setWorkSelected} toastAlert={toastAlert} />
+          <About workSelected={workSelected} setWorkSelected={setWorkSelected} />
         )}
         <Footer />
       </main>

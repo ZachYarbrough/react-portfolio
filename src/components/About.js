@@ -1,5 +1,6 @@
 import React from 'react';
 import FadeIn from 'react-fade-in';
+import halfmoon from 'halfmoon';
 
 const About = (props) => {
 
@@ -15,7 +16,7 @@ const About = (props) => {
             <div className='d-sm-flex d-none'>
                 <div>
                     <h1 className='mb-0'>Zach Yarbrough</h1>
-                    <a href="assets/zach-yarbrough-resume.pdf" download onClick={toastAlert} className="download-resume badge-group" role="group" aria-label="...">
+                    <a href="assets/zach-yarbrough-resume.pdf" download onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} className="download-resume badge-group" role="group" aria-label="...">
                         <span class="badge">Full Stack Developer based in Austin</span>
                         <span class="badge badge-primary">
                             <i className='fa fa-download mr-5'></i>
@@ -30,7 +31,7 @@ const About = (props) => {
             <div className='d-sm-none d-flex flex-column'>
                 <div>
                     <h1 className='mb-0'>Zach Yarbrough</h1>
-                    <a href="#" class="badge-group" role="group" aria-label="...">
+                    <a href="assets/zach-yarbrough-resume.pdf" download onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} class="badge-group" role="group" aria-label="...">
                         <span class="badge">Full Stack Developer based in Austin</span>
                         <span class="badge badge-primary">
                             <i className='fa fa-download mr-5'></i>
@@ -95,15 +96,15 @@ const About = (props) => {
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Contact Me</h2>
                 <div className='d-sm-flex d-none justify-content-between'>
-                    <a className='btn btn-primary font-weight-bold'>
+                    <a href='https://github.com/ZachYarbrough' target='_' className='btn btn-primary font-weight-bold'>
                         <i className='fa-brands fa-github mr-5'></i>
                         <span>@ZachYarbrough</span>
                     </a>
-                    <a className='btn btn-primary font-weight-bold'>
+                    <a href='https://www.linkedin.com/in/zachary-yarbrough-7518351a2/' target='_' className='btn btn-primary font-weight-bold'>
                         <i className='fa-brands fa-linkedin mr-5'></i>
                         <span>@ZachYarbrough</span>
                     </a>
-                    <a className='btn btn-primary font-weight-bold'>
+                    <a href='mailto:zachyarbro@gmail.com' target='_' className='btn btn-primary font-weight-bold'>
                         <i className='fa-regular fa-envelope mr-5'></i>
                         <span>zachyarbro@gmail.com</span>
                     </a>
@@ -111,19 +112,19 @@ const About = (props) => {
 
                 <div className='d-sm-none d-flex flex-column'>
                     <div className='mt-20 mb-10'>
-                        <a href='#' target='_' className='btn btn-block btn-primary text-white font-weight-bold'>
+                        <a href='https://github.com/ZachYarbrough' target='_' className='btn btn-block btn-primary text-white font-weight-bold'>
                             <i className='fa-brands fa-github mr-5'></i>
                             <span>@ZachYarbrough</span>
                         </a>
                     </div>
                     <div className='mt-20 mb-10'>
-                        <a href='#' target='_' className='btn btn-block btn-primary text-white font-weight-bold'>
+                        <a href='https://www.linkedin.com/in/zachary-yarbrough-7518351a2/' target='_' className='btn btn-block btn-primary text-white font-weight-bold'>
                             <i className='fa-brands fa-linkedin mr-5'></i>
                             <span>@ZachYarbrough</span>
                         </a>
                     </div>
                     <div className='mt-20 mb-10'>
-                        <a href='#' target='_' className='btn btn-block btn-primary font-weight-bold'>
+                        <a href='mailto:zachyarbro@gmail.com' target='_' className='btn btn-block btn-primary font-weight-bold'>
                             <i className='fa-regular fa-envelope mr-5'></i>
                             <span>@ZachYarbrough</span>
                         </a>
