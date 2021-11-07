@@ -50,12 +50,12 @@ const Navbar = (props) => {
                     <li className={`nav-item ${workSelected && 'navActive'}`}>
                         <a onClick={() => setWorkSelected(true) } className='nav-link'>Work</a>
                     </li>
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <a className='nav-link'>
                             <i className='far fa-file-text mr-5' />
                             <span>Resume</span>
                         </a>
-                    </li>
+                    </li> */}
                     <li className='nav-item'>
                         <a href='https://github.com/ZachYarbrough/react-portfolio' target="_" className='nav-link'>
                             <i className='fa fa-code-fork mr-5' />
@@ -83,10 +83,10 @@ const Navbar = (props) => {
                     <div className="dropdown-menu dropdown-menu-right w-200 z-50" aria-labelledby="navbar-dropdown-toggle-btn-1">
                         <a onClick={() => setWorkSelected(false)} className="dropdown-item is-dropdown">About</a>
                         <a onClick={() => setWorkSelected(true)} className="dropdown-item is-dropdown">Work</a>
-                        <a href="#" className="dropdown-item is-dropdown">
+                        {/* <a href="#" className="dropdown-item is-dropdown">
                             <i className='far fa-file-text mr-5 is-dropdown' aria-hidden='true' />
                             <span className='is-dropdown'>Resume</span>
-                        </a>
+                        </a> */}
                         <a href="https://github.com/ZachYarbrough/react-portfolio" target='_' className="dropdown-item is-dropdown">
                             <i className='fa fa-code-fork mr-5 is-dropdown' aria-hidden='true' />
                             <span className='is-dropdown'>Source</span>
