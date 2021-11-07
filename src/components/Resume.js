@@ -55,9 +55,7 @@ const Resume = () => {
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Projects</h2>
                 <div>
-                    <p className='d-flex align-items-start'>
-                        <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Reploy - Job Tracking Application</span>
-                    </p>
+                    <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Reploy - Job Tracking Application</span>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
                         <a href='https://reploy.herokuapp.com/' target='_'>
@@ -83,9 +81,7 @@ const Resume = () => {
                     </p>
                 </div>
                 <div>
-                    <p className='d-flex align-items-start'>
-                        <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Lyricado - Music Lyric Quiz</span>
-                    </p>
+                    <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Lyricado - Music Lyric Quiz</span>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
                         <a href=' https://zachyarbrough.github.io/music-lyric-quiz/' target='_'>
@@ -114,8 +110,12 @@ const Resume = () => {
             {/* Experience */}
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Experience</h2>
-                <p className='d-flex align-items-start'>
-                    <span className='alert alert-primary mr-10 py-0 px-5'>Storyfit Internship <br /> Jan 2020 - May 2020</span>
+                <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>StoryFit</span>
+                <p className='d-flex flex-column align-items-start'>
+                    <div className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10 mb-5 py-0 px-5'>Intern</span>
+                        <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>Jan 2020 - May 2020</span>
+                    </div>
                     <span>Utilized critical thinking to regulate movie scripts and format them correctly to ensure AI runs smoothly when determining optimal markets and audience</span>
                 </p>
             </div>
@@ -123,21 +123,34 @@ const Resume = () => {
             {/* Education */}
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Education</h2>
-                <p className='d-flex align-items-start'>
-                    <span className='alert alert-primary mr-10 py-0 px-5'>BSA in Arts and Entertainment Technologies <br /> University of Texas at Austin<br /> Aug 2017 - May 2021</span>
+
+                <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>BSA in Arts and Entertainment Technologies</span>
+                <p className='d-flex flex-column align-items-start'>
+                    <div className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10 mb-5 py-0 px-5'>University of Texas at Austin</span>
+                        <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>Aug 2017 - May 2021</span>
+                    </div>
                     <span>Graduated with a GPA of 3.51 with a concentration in Game Design and a Certificate in Radio Television and Film</span>
                 </p>
-                <p className='d-flex align-items-start'>
-                    <span className='alert alert-primary mr-10 py-0 px-5'>Bootcamp Certificate <br /> University of Texas at Austin<br /> May 2021 - Dec 2021</span>
-                    <span>A 24-week intensive program focused on gaining technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handelbars.js &amp; ReactJS.</span>
+
+                <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Bootcamp Certificate</span>
+                <p className='d-flex flex-column align-items-start'>
+                    <div className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10 mb-5 py-0 px-5'>University of Texas at Austin</span>
+                        <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>May 2021 - Dec 2021</span>
+                    </div>
+                    <span>A 24-week intensive program focused on gaining technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handelbars.js &amp; ReactJS</span>
                 </p>
             </div>
 
             {/* Honors and Awards */}
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Honors and Awards</h2>
-                <p className='d-flex align-items-start'>
-                    <span className='alert alert-primary mr-10 py-0 px-5'>Eagle Scout <br /> Sept 2014</span>
+                <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Eagle Scout</span>
+                <p className='d-flex flex-column align-items-start'>
+                    <div className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>Sept 2014</span>
+                    </div>
                     <span>Council Number #576</span>
                 </p>
             </div>
