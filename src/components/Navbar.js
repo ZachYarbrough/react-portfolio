@@ -11,6 +11,8 @@ const Navbar = (props) => {
         setProjectSelected
     } = props;
 
+    const [darkModeBtn, setDarkModeBtn] = useState('');
+
     const handleDropDown = (event) => {
         const dropdownBtn = document.querySelector('[data-toggle=dropdown]');
         const dropdown = document.querySelector('.dropdown');
@@ -22,8 +24,6 @@ const Navbar = (props) => {
             dropdown.classList.toggle('show');
         }
     }
-
-    const [darkModeBtn, setDarkModeBtn] = useState('');
 
     const handleDarkMode = () => {
         const darkModeBtnEl = document.querySelector('.dark-mode-icon');
@@ -94,7 +94,7 @@ const Navbar = (props) => {
 
             <div className="navbar-content d-sm-none">
                 <div className="dropdown">
-                    <button className="btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1">
+                    <button className=" btn btn-square" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1">
                         <i className="fa fa-bars" aria-hidden="true"></i>
                     </button>
                     <div className="dropdown-menu dropdown-menu-right w-200 z-50" aria-labelledby="navbar-dropdown-toggle-btn-1">

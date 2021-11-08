@@ -56,9 +56,10 @@ html {
     scroll-behavior: smooth;
 }
 
-.page-wrapper.with-navbar>.content-wrapper, 
-.page-wrapper.with-navbar>.sidebar {
-    top:  0 !important;
+body,
+.page-wrapper,
+.content-wrapper {
+    position: relative;
 }
 
 .navbar-spacer {
@@ -138,9 +139,6 @@ a {
 .scroll-to-top:hover {
     color: var(--lm-navbar-brand-text-color-hover);
 }
-
-
-
 
 @media screen and (min-width: 760px) {
     .content {

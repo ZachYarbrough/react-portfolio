@@ -45,7 +45,7 @@ const ProjectList = (props) => {
     return (
         <FadeIn>
             <div className='container-fluid'>
-                <div className='row justify-content-between'>
+                <div className='row justify-content-center'>
                     {currentProjects.map((project, i) => (
                         <div onClick={() => setProjectSelected(project)} className='col-md-5 col-sm-12 m-10 text-center pointer' key={project.name}>
                             <img

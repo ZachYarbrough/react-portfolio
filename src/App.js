@@ -13,32 +13,31 @@ import Footer from './components/Footer';
 import { useEffect } from 'react/cjs/react.development';
 
 function App() {
+
   const [workSelected, setWorkSelected] = useState(false);
   const [resumeSelected, setResumeSelected] = useState(false);
   const [projectSelected, setProjectSelected] = useState(false);
   const [topBtnVisible, setTopBtnVisible] = useState(false);
-  
-  const scrollRef = useRef(null)
 
-  const executeScroll = () => scrollRef.current.scrollIntoView({ behavior: 'smooth' })  
-  
   const getWindowDimensions = () => {
-    const { innerWidth: width, innerHeight: height } = window;      
+    const { innerWidth: width, innerHeight: height } = window;
     return {
       width,
       height
     };
   }
 
+
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
   const handleVisible = () => {
-    if(windowDimensions.height < document.querySelector('.content-wrapper').scrollHeight) {
+    if (windowDimensions.height < document.querySelector('.content-wrapper').scrollHeight) {
       setTopBtnVisible(true);
     } else {
       setTopBtnVisible(false);
     }
   }
-  
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -49,6 +48,7 @@ function App() {
       handleResize();
       handleVisible();
     });
+
     return () => {
       window.removeEventListener('resize', () => {
         handleResize();
@@ -58,14 +58,11 @@ function App() {
     }
   }, []);
 
-  console.log(topBtnVisible);
-
   return (
     <div className="page-wrapper with-navbar">
       <StickyAlerts />
       <Navbar workSelected={workSelected} setWorkSelected={setWorkSelected} resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
       <main className='content-wrapper'>
-        <div className='navbar-spacer' ref={scrollRef}></div>
         {projectSelected ? (
           <Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} setWorkSelected={setWorkSelected} />
         ) : (
@@ -85,8 +82,9 @@ function App() {
             )
           )
         )}
-        <ScrollButton executeScroll={executeScroll} topBtnVisible={topBtnVisible}/>  
+        <ScrollButton topBtnVisible={topBtnVisible} />
         <Footer />
+        <div className='navbar-spacer'></div>
       </main>
     </div>
   );

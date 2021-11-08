@@ -3,7 +3,7 @@ import FadeIn from 'react-fade-in';
 
 const Footer = () => {
     return (
-        <FadeIn className='content'>
+        <FadeIn className='content footer'>
             <div className='content d-flex justify-content-between'>
                 <p className='text-muted mt-20'>© 2021 Zach Yarbrough. All Rights Reserved.</p>
                 <ul className='mt-15 font-size-18 text-muted'>
