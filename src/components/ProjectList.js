@@ -47,7 +47,7 @@ const ProjectList = (props) => {
             <div className='container-fluid'>
                 <div className='row justify-content-between'>
                     {currentProjects.map((project, i) => (
-                        <div onClick={() => setProjectSelected(project)} className='col-md-5 col-sm-12 m-10 text-center' key={project.name}>
+                        <div onClick={() => setProjectSelected(project)} className='col-md-5 col-sm-12 m-10 text-center pointer' key={project.name}>
                             <img
                                 src={require(`../../public/assets/images/projects/${i}.png`).default}
                                 alt={project.name}

@@ -1,6 +1,5 @@
 import React from 'react';
 import FadeIn from 'react-fade-in';
-import halfmoon from 'halfmoon';
 
 const About = (props) => {
 

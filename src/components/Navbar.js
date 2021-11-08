@@ -8,7 +8,6 @@ const Navbar = (props) => {
         setWorkSelected,
         resumeSelected,
         setResumeSelected,
-        projectSelected,
         setProjectSelected
     } = props;
 

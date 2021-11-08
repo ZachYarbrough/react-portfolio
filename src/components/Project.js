@@ -14,7 +14,7 @@ const Project = (props) => {
         <FadeIn className='content'>
             <h2 className='font-size-24 font-weight-bold border-bottom'>{projectSelected.name}</h2>
             <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a onClick={() => {
+                <li class="breadcrumb-item"><a className='link pointer' onClick={() => {
                     setProjectSelected(false);
                     setWorkSelected(true);
                 }}>Work</a></li>

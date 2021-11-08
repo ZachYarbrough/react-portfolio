@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import FadeIn from 'react-fade-in';
 
 const Resume = () => {
+
     return (
         <FadeIn className='content'>
             {/* Summary */}
@@ -17,17 +18,17 @@ const Resume = () => {
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Skills</h2>
                 <p className='d-flex align-items-start'>
                     <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Languages</span>
-                    <div className='d-flex flex-wrap'>
+                    <span className='d-flex flex-wrap'>
                         <span className="alert mt-5 mr-5 py-0 px-5">HTML</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">CSS</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">JavaScript</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">C#</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">Swift</span>
-                    </div>
+                    </span>
                 </p>
                 <p className='d-flex align-items-start'>
                     <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Technical</span>
-                    <div className='d-flex flex-wrap'>
+                    <span className='d-flex flex-wrap'>
                         <span className="alert mt-5 mr-5 py-0 px-5">React</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">Git</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">NodeJS</span>
@@ -38,16 +39,16 @@ const Resume = () => {
                         <span className="alert mt-5 mr-5 py-0 px-5">AJAX</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">MySQL</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">Handlebars</span>
-                    </div>
+                    </span>
                 </p>
                 <p className='d-flex align-items-start'>
                     <span className='nowrap-div alert alert-primary mt-5 mr-5 py-0 px-5'>Non Technical</span>
-                    <div className='d-flex flex-wrap'>
+                    <span className='d-flex flex-wrap'>
                         <span className="alert mt-5 mr-5 py-0 px-5">Agile Scrum Methodology</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">Object Oriented Design</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">Flexible Learner</span>
                         <span className="alert mt-5 mr-5 py-0 px-5">Model View Controller</span>
-                    </div>
+                    </span>
                 </p>
             </div>
 
@@ -70,15 +71,15 @@ const Resume = () => {
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
-                    <p className='d-flex align-items-start'>
+                    <div className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-5 py-0 px-5'>Stack</span>
-                        <div className='d-flex flex-wrap'>
+                        <p className='d-flex flex-wrap'>
                             <span className="alert mr-5 py-0 px-5">Handlebars</span>
                             <span className="alert mr-5 py-0 px-5">MySQL</span>
                             <span className="alert mr-5 py-0 px-5">ExpressJS</span>
                             <span className="alert mr-5 py-0 px-5">NodeJS</span>
-                        </div>
-                    </p>
+                        </p>
+                    </div>
                 </div>
                 <div>
                     <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Lyricado - Music Lyric Quiz</span>
@@ -96,14 +97,14 @@ const Resume = () => {
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
-                    <p className='d-flex align-items-start'>
+                    <div className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-5 py-0 px-5'>Stack</span>
-                        <div className='d-flex flex-wrap'>
+                        <p className='d-flex flex-wrap'>
                             <span className="alert mr-5 py-0 px-5">HTML</span>
                             <span className="alert mr-5 py-0 px-5">CSS</span>
                             <span className="alert mr-5 py-0 px-5">JavaScript</span>
-                        </div>
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -111,13 +112,13 @@ const Resume = () => {
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Experience</h2>
                 <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>StoryFit</span>
-                <p className='d-flex flex-column align-items-start'>
-                    <div className='d-flex align-items-start'>
+                <div className='d-flex flex-column align-items-start'>
+                    <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 mb-5 py-0 px-5'>Intern</span>
                         <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>Jan 2020 - May 2020</span>
-                    </div>
+                    </p>
                     <span>Utilized critical thinking to regulate movie scripts and format them correctly to ensure AI runs smoothly when determining optimal markets and audience</span>
-                </p>
+                </div>
             </div>
 
             {/* Education */}
@@ -125,34 +126,34 @@ const Resume = () => {
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Education</h2>
 
                 <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>BSA in Arts and Entertainment Technologies</span>
-                <p className='d-flex flex-column align-items-start'>
-                    <div className='d-flex align-items-start'>
+                <div className='d-flex flex-column align-items-start'>
+                    <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 mb-5 py-0 px-5'>University of Texas at Austin</span>
                         <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>Aug 2017 - May 2021</span>
-                    </div>
+                    </p>
                     <span>Graduated with a GPA of 3.51 with a concentration in Game Design and a Certificate in Radio Television and Film</span>
-                </p>
+                </div>
 
                 <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Bootcamp Certificate</span>
-                <p className='d-flex flex-column align-items-start'>
-                    <div className='d-flex align-items-start'>
+                <div className='d-flex flex-column align-items-start'>
+                    <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 mb-5 py-0 px-5'>University of Texas at Austin</span>
                         <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>May 2021 - Dec 2021</span>
-                    </div>
+                    </p>
                     <span>A 24-week intensive program focused on gaining technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handelbars.js &amp; ReactJS</span>
-                </p>
+                </div>
             </div>
 
             {/* Honors and Awards */}
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Honors and Awards</h2>
                 <span className='font-size-18 font-weight-bold mr-10 py-0 px-5'>Eagle Scout</span>
-                <p className='d-flex flex-column align-items-start'>
-                    <div className='d-flex align-items-start'>
+                <div className='d-flex flex-column align-items-start'>
+                    <p className='d-flex align-items-start'>
+                        <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>Council Number 576</span>
                         <span className='alert alert-primary mr-10  mb-5 py-0 px-5'>Sept 2014</span>
-                    </div>
-                    <span>Council Number #576</span>
-                </p>
+                    </p>
+                </div>
             </div>
         </FadeIn>
     );
