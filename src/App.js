@@ -39,11 +39,18 @@ function App() {
   }
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [workSelected, resumeSelected, projectSelected]);
+
+  useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener('click', handleVisible);
+    window.addEventListener('click', () => {
+      setTopBtnVisible(false);
+      handleVisible();
+    });
     window.addEventListener('resize', () => {
       handleResize();
       handleVisible();
@@ -54,7 +61,10 @@ function App() {
         handleResize();
         handleVisible();
       });
-      window.removeEventListener('click', handleVisible);
+      window.removeEventListener('click', () => {
+        setTopBtnVisible(false);
+        handleVisible();
+      });
     }
   }, []);
 

@@ -9,7 +9,7 @@ const Header = () => {
             <div className='d-sm-flex d-none'>
                 <div>
                     <h1 className='mb-0'>Zach Yarbrough</h1>
-                    <a href="assets/zach-yarbrough-resume.pdf" download onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} className="download-resume badge-group mt-5" role="group" aria-label="...">
+                    <a href={require('../assets/zach-yarbrough-resume.pdf').default} download onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} className="download-resume badge-group mt-5" role="group" aria-label="...">
                         <span className="badge">Full Stack Developer based in Austin</span>
                         <span className="badge badge-primary">
                             <i className='fa fa-download mr-5'></i>
@@ -17,14 +17,14 @@ const Header = () => {
                         </span>
                     </a>
                 </div>
-                <img src='assets/images/profile-image.jpeg' className="ml-auto mr-20 img-fluid border rounded-circle w-100 h-100" alt="Profile" />
+                <img src={require('../assets/images/profile-image.png').default} className="ml-auto mr-20 img-fluid border rounded-circle w-100 h-100" alt="Profile" />
             </div>
 
             {/* Header - Small */}
             <div className='d-sm-none d-flex flex-column'>
                 <div>
                     <h1 className='mb-0'>Zach Yarbrough</h1>
-                    <a href="assets/zach-yarbrough-resume.pdf" download onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} className="download-resume badge-group mt-5" role="group" aria-label="...">
+                    <a href={require('../assets/zach-yarbrough-resume.pdf').default} download onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} className="download-resume badge-group mt-5" role="group" aria-label="...">
                         <span className="badge">Full Stack Developer based in Austin</span>
                         <span className="badge badge-primary">
                             <i className='fa fa-download mr-5'></i>
@@ -32,7 +32,7 @@ const Header = () => {
                         </span>
                     </a>
                 </div>
-                <img src='assets/images/profile-image.jpeg' className="mx-auto mt-20 mb-0 img-fluid border rounded-circle w-100 h-100" alt="Profile" />
+                <img src={require('../assets/images/profile-image.png').default} className="mx-auto mt-20 mb-0 img-fluid border rounded-circle w-100 h-100" alt="Profile" />
             </div>
         </FadeIn>
     );

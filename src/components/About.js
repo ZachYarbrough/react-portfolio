@@ -25,7 +25,7 @@ const About = (props) => {
             {/* Contact */}
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Contact Me</h2>
-                <div className='d-sm-flex d-none justify-content-between'>
+                <div className='d-md-flex d-none justify-content-between'>
                     <a href='https://github.com/ZachYarbrough' target='_' className='btn btn-primary font-weight-bold'>
                         <i className='fa-brands fa-github mr-5'></i>
                         <span>@ZachYarbrough</span>
@@ -40,7 +40,7 @@ const About = (props) => {
                     </a>
                 </div>
 
-                <div className='d-sm-none d-flex flex-column'>
+                <div className='d-md-none d-flex flex-column'>
                     <div className='mt-20 mb-10'>
                         <a href='https://github.com/ZachYarbrough' target='_' className='btn btn-block btn-primary font-weight-bold'>
                             <i className='fa-brands fa-github mr-5'></i>

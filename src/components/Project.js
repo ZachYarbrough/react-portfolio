@@ -53,9 +53,15 @@ const Project = (props) => {
                     </div>
                 </p>
             </div>
-            <div>
-                {/* Images will be added here */}
-            </div>
+            {projectSelected.images.map((image, i) => (
+                <div>
+                    <img
+                        src={image}
+                        alt={projectSelected.name + ' ' + i}
+                        className=" project-image img-fluid rounded shadow mt-5"
+                    />
+                </div>  
+            ))}
         </FadeIn>
     );
 }
