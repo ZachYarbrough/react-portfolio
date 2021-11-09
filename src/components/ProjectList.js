@@ -24,7 +24,7 @@ const ProjectList = (props) => {
                                 className=" project-image img-fluid rounded shadow"
                             />
                             <p className='ml-auto'>
-                                <span className='font-size-24 font-weight-bold'>{project.name}</span><br />
+                                <span className='font-size-22'>{project.name}</span><br />
                                 <span>{project.shortDescription}</span>
                             </p>
                         </div>

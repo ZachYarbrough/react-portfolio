@@ -34,14 +34,14 @@ const Project = (props) => {
                 <p className='d-flex align-items-start'>
                     <span className='alert alert-primary mr-5 py-0 px-5'>Website</span>
                     <a href={`${projectSelected.website}`} target='_'>
-                        <span className='mr-5'>{projectSelected.website}</span>
+                        <span className='mr-5 link text-break'>{projectSelected.website}</span>
                         <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                     </a>
                 </p>
                 <p className='d-flex align-items-start'>
                     <span className='alert alert-primary mr-5 py-0 px-5'>Source</span>
                     <a href={`${projectSelected.source}`} target='_'>
-                        <span className='mr-5'>{projectSelected.source}</span>
+                        <span className='mr-5 link text-break'>{projectSelected.source}</span>
                         <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                     </a>
                 </p>

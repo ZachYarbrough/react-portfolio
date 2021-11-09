@@ -65,6 +65,15 @@ body,
     position: relative;
 }
 
+
+.text-break {
+    word-break: break-all !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .navbar-spacer {
     height: var(--navbar-height);
 }
@@ -91,15 +100,14 @@ body,
 }
 
 .nav-link,
-.link,
-a {
+.link {
     padding-bottom: 2px;
-    text-decoration: none;
 }
+
 .nav-link:hover span,
 .link:hover {
     border-bottom: solid var(--lm-navbar-link-text-color-hover) 1px;
-    text-decoration: none;
+    padding-bottom: 0;
 }
 
 .dark-mode .navbar {
@@ -151,6 +159,18 @@ a {
     position: relative; 
     box-sizing: border-box; 
     margin: 0px;
+}
+
+#topBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: flex-grow 2s linear
+  }
+
+#topBtn.show {
+    flex-grow: 0.00001; 
 }
 
 @media screen and (min-width: 760px) {

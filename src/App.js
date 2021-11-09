@@ -1,6 +1,7 @@
 import 'halfmoon/css/halfmoon-variables.min.css';
 import './App.css';
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import StickyAlerts from './components/StickyAlerts';
 import Navbar from './components/Navbar';
 import Work from './components/Work';
@@ -10,7 +11,6 @@ import Resume from './components/Resume';
 import About from './components/About';
 import ScrollButton from './components/ScrollButton';
 import Footer from './components/Footer';
-import { useEffect } from 'react/cjs/react.development';
 
 
 import reploy0 from './assets/images/reploy/0.png';
@@ -61,7 +61,6 @@ function App() {
     };
   }
 
-
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   const handleVisible = () => {
@@ -70,10 +69,29 @@ function App() {
     } else {
       setTopBtnVisible(false);
     }
+
+    const dropdown = document.querySelector('.dropdown');
+
+    if(window.innerWidth > 576 && dropdown.classList.contains('show')) {
+      dropdown.classList.remove('show');
+    }
+  }
+
+  const handleDropDown = (event) => {
+    const dropdownBtn = document.querySelector('[data-toggle=dropdown]');
+    const dropdown = document.querySelector('.dropdown');
+    if (event.target === dropdownBtn || event.target === dropdown || event.target.classList.contains('fa-bars')) {
+      dropdown.classList.toggle('show');
+    } else if (dropdown.classList.contains('show') && !event.target.classList.contains('is-dropdown')) {
+      dropdown.classList.toggle('show');
+    }
   }
 
   useEffect(() => {
+    const dropdown = document.querySelector('.dropdown');
+
     window.scrollTo({ top: 0, behavior: 'instant' });
+    if(dropdown.classList.contains('show')) dropdown.classList.remove('show');
   }, [workSelected, resumeSelected, projectSelected]);
 
   useEffect(() => {
@@ -85,18 +103,28 @@ function App() {
       setTopBtnVisible(false);
       handleVisible();
     });
+
+    window.addEventListener('scroll', () => {
+      handleVisible();
+    });
+
     window.addEventListener('resize', () => {
       handleResize();
       handleVisible();
     });
 
     return () => {
-      window.removeEventListener('resize', () => {
-        handleResize();
-        handleVisible();
-      });
       window.removeEventListener('click', () => {
         setTopBtnVisible(false);
+        handleVisible();
+      });
+
+      window.removeEventListener('scroll', () => {
+        handleVisible();
+      });
+
+      window.removeEventListener('resize', () => {
+        handleResize();
         handleVisible();
       });
     }
@@ -105,13 +133,13 @@ function App() {
   return (
     <div className="page-wrapper with-navbar">
       <StickyAlerts />
-      <Navbar workSelected={workSelected} setWorkSelected={setWorkSelected} resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
+      <Navbar handleDropDown={handleDropDown} workSelected={workSelected} setWorkSelected={setWorkSelected} resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
       <main className='content-wrapper'>
         {projectSelected ? (
           <Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} setResumeSelected={setResumeSelected} setWorkSelected={setWorkSelected} breadcrumbState={breadcrumbState} />
         ) : (
           workSelected ? (
-            <Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState}/>
+            <Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />
           ) : (
             resumeSelected ? (
               <div>

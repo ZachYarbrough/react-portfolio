@@ -57,26 +57,26 @@ const Resume = (props) => {
             <div className='d-flex flex-column'>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Projects</h2>
                 <div>
-                    <span className='font-size-18 font-weight-bold'>Reploy - Job Tracking Application</span>
+                    <span className='font-size-18 font-weight-bold'>{currentProjects[0].name} - Job Tracking Application</span>
                     <a onClick={() => {
                         setResumeSelected(false);
                         setBreadcrumbState('Resume');
                         setProjectSelected(currentProjects[0]);
-                    }} className=' ml-10 btn font-weight-bold'>
+                    }} className=' ml-10 btn font-weight-bold d-none d-sm-inline-block'>
                         <span className='mr-5'>View Project</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
                     </a>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
-                        <a href='https://reploy.herokuapp.com/' target='_'>
-                            <span className='mr-5'>https://reploy.herokuapp.com</span>
+                        <a href={currentProjects[0].website} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[0].source}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Source</span>
-                        <a href='https://github.com/abjj1999/Job-Tracker' target='_'>
-                            <span className='mr-5'>https://github.com/abjj1999/Job-Tracker</span>
+                        <a href={currentProjects[0].source} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[0].source}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
@@ -88,28 +88,36 @@ const Resume = (props) => {
                             ))}
                         </span>
                     </p>
-                </div>
-                <div>
-                    <span className='font-size-18 font-weight-bold'>Lyricado - Music Lyric Quiz</span>
                     <a onClick={() => {
                         setResumeSelected(false);
                         setBreadcrumbState('Resume');
-                        setProjectSelected(currentProjects[1]);
-                    }} className=' ml-10 btn font-weight-bold'>
+                        setProjectSelected(currentProjects[0]);
+                    }} className=' ml-10 mb-10 btn font-weight-bold d-sm-none d-block'>
+                        <span className='mr-5'>View Project</span>
+                        <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
+                    </a>
+                </div>
+                <div>
+                    <span className='font-size-18 font-weight-bold'>{currentProjects[1].name} - Music Lyric Quiz</span>
+                    <a onClick={() => {
+                        setResumeSelected(false);
+                        setBreadcrumbState('Resume');
+                        setProjectSelected(currentProjects[0]);
+                    }} className=' ml-10 btn font-weight-bold d-none d-sm-inline-block'>
                         <span className='mr-5'>View Project</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
                     </a>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
-                        <a href=' https://zachyarbrough.github.io/music-lyric-quiz/' target='_'>
-                            <span className='mr-5'> https://zachyarbrough.github.io/music-lyric-quiz</span>
+                        <a href={currentProjects[1].website} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[1].website}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Source</span>
-                        <a href='https://github.com/ZachYarbrough/music-lyric-quiz' target='_'>
-                            <span className='mr-5'>https://github.com/ZachYarbrough/music-lyric-quiz</span>
+                        <a href={currentProjects[1].source} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[1].source}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
@@ -121,6 +129,14 @@ const Resume = (props) => {
                             ))}
                         </span>
                     </p>
+                    <a onClick={() => {
+                        setResumeSelected(false);
+                        setBreadcrumbState('Resume');
+                        setProjectSelected(currentProjects[0]);
+                    }} className=' ml-10 btn font-weight-bold d-sm-none d-block'>
+                        <span className='mr-5'>View Project</span>
+                        <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
+                    </a>
                 </div>
             </div>
 
@@ -129,9 +145,9 @@ const Resume = (props) => {
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Experience</h2>
                 <span className='font-size-18 font-weight-bold'>StoryFit</span>
                 <div className='d-flex flex-column align-items-start'>
-                    <p className='d-flex align-items-start'>
-                        <span className='alert alert-primary mr-5 py-0 px-5'>Intern</span>
-                        <span className='alert alert-primary mr-5 py-0 px-5'>Jan 2020 - May 2020</span>
+                    <p className='d-flex align-items-start flex-wrap'>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Intern</span>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Jan 2020 - May 2020</span>
                     </p>
                     <span>Utilized critical thinking to regulate movie scripts and format them correctly to ensure AI runs smoothly when determining optimal markets and audience</span>
                 </div>
@@ -143,18 +159,18 @@ const Resume = (props) => {
 
                 <span className='font-size-18 font-weight-bold'>BSA in Arts and Entertainment Technologies</span>
                 <div className='d-flex flex-column align-items-start'>
-                    <p className='d-flex align-items-start'>
-                        <span className='alert alert-primary mr-5 py-0 px-5'>University of Texas at Austin</span>
-                        <span className='alert alert-primary mr-5 py-0 px-5'>Aug 2017 - May 2021</span>
+                    <p className='d-flex align-items-start flex-wrap'>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>University of Texas at Austin</span>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Aug 2017 - May 2021</span>
                     </p>
                     <span>Graduated with a GPA of 3.51 with a concentration in Game Design and a Certificate in Radio Television and Film</span>
                 </div>
 
                 <span className='font-size-18 font-weight-bold mt-10'>Bootcamp Certificate</span>
                 <div className='d-flex flex-column align-items-start'>
-                    <p className='d-flex align-items-start'>
-                        <span className='alert alert-primary mr-5 py-0 px-5'>University of Texas at Austin</span>
-                        <span className='alert alert-primary mr-5 py-0 px-5'>May 2021 - Dec 2021</span>
+                    <p className='d-flex align-items-start flex-wrap'>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>University of Texas at Austin</span>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>May 2021 - Dec 2021</span>
                     </p>
                     <span>A 24-week intensive program focused on gaining technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handelbars.js &amp; ReactJS</span>
                 </div>

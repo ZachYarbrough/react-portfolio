@@ -14,6 +14,7 @@ const Navbar = (props) => {
     } = props;
 
     const [darkModeBtn, setDarkModeBtn] = useState('');
+    const [dropdownState, setDropdownState] = useState(false);
 
     const handleDropDown = (event) => {
         const dropdownBtn = document.querySelector('[data-toggle=dropdown]');
