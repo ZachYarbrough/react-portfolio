@@ -11,17 +11,22 @@ import Resume from './components/Resume';
 import About from './components/About';
 import ScrollButton from './components/ScrollButton';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 
-import reploy0 from './assets/images/reploy/0.png';
+import reploy0 from './assets/images/projects/0.png';
 import reploy1 from './assets/images/reploy/1.png';
-import weatherDashboard0 from './assets/images/weather-dashboard/0.png';
+import weatherDashboard0 from './assets/images/projects/1.png';
+import lyricado0 from './assets/images/projects/2.png';
+import lyricado1 from './assets/images/lyricado/1.png';
+import taskinator0 from './assets/images/projects/3.png';
 
 function App() {
 
   const [workSelected, setWorkSelected] = useState(false);
   const [resumeSelected, setResumeSelected] = useState(false);
   const [projectSelected, setProjectSelected] = useState(false);
+  const [contactSelected, setContactSelected] = useState(false);
   const [topBtnVisible, setTopBtnVisible] = useState(false);
   const [breadcrumbState, setBreadcrumbState] = useState('Work');
 
@@ -50,6 +55,31 @@ function App() {
         weatherDashboard0
       ],
       stack: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      name: 'Lyricado',
+      shortDescription: "A music lyric quiz",
+      description: "An application that utilizes the MusixMatch and Giphy APIs to quiz the user on how well they can guess the genre of a song based on a lyric snippet.",
+      website: 'https://zachyarbrough.github.io/music-lyric-quiz/index.html',
+      source: 'https://github.com/ZachYarbrough/music-lyric-quiz',
+      platform: ['Web'],
+      images: [
+        lyricado0,
+        lyricado1
+      ],
+      stack: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      name: 'Taskinator',
+      shortDescription: "A kanban styled task manager",
+      description: "A kanban styled to do list that utilizes javascript and local storage to store information.",
+      website: 'https://zachyarbrough.github.io/taskinator/',
+      source: 'https://github.com/ZachYarbrough/taskinator',
+      platform: ['Web'],
+      images: [
+        taskinator0
+      ],
+      stack: ['HTML', 'CSS', 'JavaScript']
     }
   ]
 
@@ -72,7 +102,7 @@ function App() {
 
     const dropdown = document.querySelector('.dropdown');
 
-    if(window.innerWidth > 576 && dropdown.classList.contains('show')) {
+    if (window.innerWidth > 576 && dropdown.classList.contains('show')) {
       dropdown.classList.remove('show');
     }
   }
@@ -91,8 +121,8 @@ function App() {
     const dropdown = document.querySelector('.dropdown');
 
     window.scrollTo({ top: 0, behavior: 'instant' });
-    if(dropdown.classList.contains('show')) dropdown.classList.remove('show');
-  }, [workSelected, resumeSelected, projectSelected]);
+    if (dropdown.classList.contains('show')) dropdown.classList.remove('show');
+  }, [workSelected, resumeSelected, projectSelected, contactSelected]);
 
   useEffect(() => {
     function handleResize() {
@@ -133,7 +163,7 @@ function App() {
   return (
     <div className="page-wrapper with-navbar">
       <StickyAlerts />
-      <Navbar handleDropDown={handleDropDown} workSelected={workSelected} setWorkSelected={setWorkSelected} resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
+      <Navbar handleDropDown={handleDropDown} contactSelected={contactSelected} setContactSelected={setContactSelected} workSelected={workSelected} setWorkSelected={setWorkSelected} resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
       <main className='content-wrapper'>
         {projectSelected ? (
           <Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} setResumeSelected={setResumeSelected} setWorkSelected={setWorkSelected} breadcrumbState={breadcrumbState} />
@@ -147,10 +177,17 @@ function App() {
                 <Resume resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />
               </div>
             ) : (
-              <div>
-                <Header />
-                <About workSelected={workSelected} setWorkSelected={setWorkSelected} />
-              </div>
+              contactSelected ? (
+                <div>
+                  <Header />
+                  <Contact />
+                </div>
+              ) : (
+                <div>
+                  <Header />
+                  <About workSelected={workSelected} setWorkSelected={setWorkSelected} />
+                </div>
+              )
             )
           )
         )}

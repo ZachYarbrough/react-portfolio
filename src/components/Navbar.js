@@ -5,8 +5,11 @@ import Project from './Project';
 const Navbar = (props) => {
 
     const {
+        handleDropDown,
         workSelected,
         setWorkSelected,
+        contactSelected,
+        setContactSelected,
         resumeSelected,
         setResumeSelected,
         projectSelected,
@@ -14,19 +17,6 @@ const Navbar = (props) => {
     } = props;
 
     const [darkModeBtn, setDarkModeBtn] = useState('');
-    const [dropdownState, setDropdownState] = useState(false);
-
-    const handleDropDown = (event) => {
-        const dropdownBtn = document.querySelector('[data-toggle=dropdown]');
-        const dropdown = document.querySelector('.dropdown');
-        if (event.target === dropdownBtn || event.target === dropdown || event.target.classList.contains('fa-bars')) {
-            dropdownBtn.classList.toggle('active');
-            dropdown.classList.toggle('show');
-        } else if (dropdown.classList.contains('show') && !event.target.classList.contains('is-dropdown')) {
-            dropdownBtn.classList.toggle('active');
-            dropdown.classList.toggle('show');
-        }
-    }
 
     const handleDarkMode = () => {
         const darkModeBtnEl = document.querySelector('.dark-mode-icon');
@@ -55,13 +45,15 @@ const Navbar = (props) => {
                     setWorkSelected(false);
                     setResumeSelected(false);
                     setProjectSelected(false);
+                    setContactSelected(false);
                 }} className='navbar-brand'>Zach Yarbrough</a>
                 <ul className='navbar-nav d-none d-sm-flex'>
-                    <li className={`nav-item ${(!workSelected && !resumeSelected && !projectSelected) && 'navActive'}`}>
+                    <li className={`nav-item ${(!workSelected && !resumeSelected && !projectSelected && !contactSelected) && 'navActive'}`}>
                         <a onClick={() => {
                             setWorkSelected(false);
                             setResumeSelected(false);
                             setProjectSelected(false);
+                            setContactSelected(false);
                         }} className='nav-link'>
                             <span>About</span>
                         </a>
@@ -71,8 +63,19 @@ const Navbar = (props) => {
                             setWorkSelected(true);
                             setResumeSelected(false);
                             setProjectSelected(false);
+                            setContactSelected(false);
                         }} className='nav-link'>
                             <span>Work</span>
+                        </a>
+                    </li>
+                    <li className={`nav-item ${contactSelected && 'navActive'}`}>
+                        <a onClick={() => {
+                            setWorkSelected(false);
+                            setResumeSelected(false);
+                            setProjectSelected(false);
+                            setContactSelected(true);
+                        }} className='nav-link'>
+                            <span>Contact</span>
                         </a>
                     </li>
                     <li className={`nav-item ${resumeSelected && 'navActive'}`}>
@@ -80,6 +83,7 @@ const Navbar = (props) => {
                             setWorkSelected(false);
                             setResumeSelected(true);
                             setProjectSelected(false);
+                            setContactSelected(false);
                         }} className='nav-link'>
                             <span>Resume</span>
                         </a>
@@ -105,7 +109,7 @@ const Navbar = (props) => {
 
             <div className="navbar-content d-sm-none">
                 <div className="dropdown">
-                    <button className=" btn btn-square" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1">
+                    <button className=" btn btn-square" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1" aria-label="dropdown">
                         <i className="fa fa-bars" aria-hidden="true"></i>
                     </button>
                     <div className="dropdown-menu dropdown-menu-right w-200 z-50" aria-labelledby="navbar-dropdown-toggle-btn-1">
@@ -113,6 +117,7 @@ const Navbar = (props) => {
                             setWorkSelected(false);
                             setResumeSelected(false);
                             setProjectSelected(false);
+                            setContactSelected(false);
                         }} className="dropdown-item is-dropdown">
                             <span className='is-dropdown'>About</span>
                         </a>
@@ -120,13 +125,23 @@ const Navbar = (props) => {
                             setWorkSelected(true);
                             setResumeSelected(false);
                             setProjectSelected(false);
+                            setContactSelected(false);
                         }} className="dropdown-item is-dropdown">
                             <span className='is-dropdown'>Work</span>
                         </a>
                         <a onClick={() => {
                             setWorkSelected(false);
+                            setResumeSelected(false);
+                            setProjectSelected(false);
+                            setContactSelected(true);
+                        }} className="dropdown-item is-dropdown">
+                            <span className='is-dropdown'>Contact</span>
+                        </a>
+                        <a onClick={() => {
+                            setWorkSelected(false);
                             setResumeSelected(true);
                             setProjectSelected(false);
+                            setContactSelected(false);
                         }} className="dropdown-item is-dropdown">
                             <span className='is-dropdown'>Resume</span>
                         </a>
