@@ -1,6 +1,7 @@
 :root {
     --base-border-radius: 1rem;
     --base-font-size: 1.6rem;
+    --lm-base-text-color: #474747;
     --lm-alert-success-border-color: #0ac46d;
 
     --lm-navbar-link-text-color-hover: #c057bb;

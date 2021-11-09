@@ -3,7 +3,9 @@ import FadeIn from 'react-fade-in';
 
 const Project = (props) => {
     const {
+        breadcrumbState,
         projectSelected,
+        setResumeSelected,
         setProjectSelected,
         setWorkSelected
     } = props;
@@ -14,11 +16,18 @@ const Project = (props) => {
         <FadeIn className='content'>
             <h2 className='font-size-24 font-weight-bold border-bottom'>{projectSelected.name}</h2>
             <ul class="breadcrumb">
+                {breadcrumbState === 'Work' ? (
                 <li class="breadcrumb-item"><a className='link pointer' onClick={() => {
                     setProjectSelected(false);
                     setWorkSelected(true);
-                }}>Work</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><a><span className='font-weight-bold font-size-16'>{projectSelected.name}</span></a></li>
+                }}>Work</a></li> 
+                ) : (
+                    <li class="breadcrumb-item"><a className='link pointer' onClick={() => {
+                        setProjectSelected(false);
+                        setResumeSelected(true);
+                    }}>Resume</a></li> 
+                )}
+                <li class="breadcrumb-item active" aria-current="page"><a><span className='font-weight-bold'>{projectSelected.name}</span></a></li>
             </ul>
             <div>
                 <p>{projectSelected.description}</p>

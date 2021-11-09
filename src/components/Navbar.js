@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import halfmoon from 'halfmoon';
+import Project from './Project';
 
 const Navbar = (props) => {
 
@@ -8,6 +9,7 @@ const Navbar = (props) => {
         setWorkSelected,
         resumeSelected,
         setResumeSelected,
+        projectSelected,
         setProjectSelected
     } = props;
 
@@ -54,6 +56,15 @@ const Navbar = (props) => {
                     setProjectSelected(false);
                 }} className='navbar-brand'>Zach Yarbrough</a>
                 <ul className='navbar-nav d-none d-sm-flex'>
+                    <li className={`nav-item ${(!workSelected && !resumeSelected && !projectSelected) && 'navActive'}`}>
+                        <a onClick={() => {
+                            setWorkSelected(false);
+                            setResumeSelected(false);
+                            setProjectSelected(false);
+                        }} className='nav-link'>
+                            <span>About</span>
+                        </a>
+                    </li>
                     <li className={`nav-item ${workSelected && 'navActive'}`}>
                         <a onClick={() => {
                             setWorkSelected(true);
@@ -69,7 +80,6 @@ const Navbar = (props) => {
                             setResumeSelected(true);
                             setProjectSelected(false);
                         }} className='nav-link'>
-                            <i className='far fa-file-text mr-5' />
                             <span>Resume</span>
                         </a>
                     </li>
@@ -102,18 +112,21 @@ const Navbar = (props) => {
                             setWorkSelected(false);
                             setResumeSelected(false);
                             setProjectSelected(false);
-                        }} className="dropdown-item is-dropdown">About</a>
+                        }} className="dropdown-item is-dropdown">
+                            <span className='is-dropdown'>About</span>
+                        </a>
                         <a onClick={() => {
                             setWorkSelected(true);
                             setResumeSelected(false);
                             setProjectSelected(false);
-                        }} className="dropdown-item is-dropdown">Work</a>
+                        }} className="dropdown-item is-dropdown">
+                            <span className='is-dropdown'>Work</span>
+                        </a>
                         <a onClick={() => {
                             setWorkSelected(false);
                             setResumeSelected(true);
                             setProjectSelected(false);
                         }} className="dropdown-item is-dropdown">
-                            <i className='far fa-file-text mr-5 is-dropdown' aria-hidden='true' />
                             <span className='is-dropdown'>Resume</span>
                         </a>
                         <a href="https://github.com/ZachYarbrough/react-portfolio" target='_' className="dropdown-item is-dropdown">

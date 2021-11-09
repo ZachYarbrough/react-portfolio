@@ -5,15 +5,16 @@ import ProjectList from './ProjectList';
 const Work = (props) => {
 
     const {
-        projectSelected,
-        setProjectSelected
+        currentProjects,
+        setProjectSelected,
+        setBreadcrumbState
     } = props;
 
     return (
         <FadeIn className='content'>
             <div>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Work</h2>
-                <ProjectList projectSelected={projectSelected} setProjectSelected={setProjectSelected}/>
+                <ProjectList currentProjects={currentProjects} setProjectSelected={setProjectSelected} setBreadcrumbState={setBreadcrumbState} />
             </div>
         </FadeIn>
     );

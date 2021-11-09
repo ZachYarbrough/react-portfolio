@@ -12,12 +12,46 @@ import ScrollButton from './components/ScrollButton';
 import Footer from './components/Footer';
 import { useEffect } from 'react/cjs/react.development';
 
+
+import reploy0 from './assets/images/reploy/0.png';
+import reploy1 from './assets/images/reploy/1.png';
+import weatherDashboard0 from './assets/images/weather-dashboard/0.png';
+
 function App() {
 
   const [workSelected, setWorkSelected] = useState(false);
   const [resumeSelected, setResumeSelected] = useState(false);
   const [projectSelected, setProjectSelected] = useState(false);
   const [topBtnVisible, setTopBtnVisible] = useState(false);
+  const [breadcrumbState, setBreadcrumbState] = useState('Work');
+
+  const currentProjects = [
+    {
+      name: 'Reploy',
+      shortDescription: "A job application tracker",
+      description: "A job application tracker that stores the user's applications in a database",
+      website: 'https://reploy.herokuapp.com',
+      source: 'https://github.com/abjj1999/Job-Tracker',
+      platform: ['Web'],
+      images: [
+        reploy0,
+        reploy1
+      ],
+      stack: ['Handlebars', 'MySQL', 'ExpressJS', 'NodeJS']
+    },
+    {
+      name: 'Weather Dashboard',
+      shortDescription: "A weather tracker that forecasts the next 5 days",
+      description: "An application that utilizes the Open Weather API to fetch the weather for the next 5 days based on location.",
+      website: 'https://zachyarbrough.github.io/weather-dashboard/',
+      source: 'https://github.com/ZachYarbrough/weather-dashboard',
+      platform: ['Web'],
+      images: [
+        weatherDashboard0
+      ],
+      stack: ['HTML', 'CSS', 'JavaScript']
+    }
+  ]
 
   const getWindowDimensions = () => {
     const { innerWidth: width, innerHeight: height } = window;
@@ -74,15 +108,15 @@ function App() {
       <Navbar workSelected={workSelected} setWorkSelected={setWorkSelected} resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
       <main className='content-wrapper'>
         {projectSelected ? (
-          <Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} setWorkSelected={setWorkSelected} />
+          <Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} setResumeSelected={setResumeSelected} setWorkSelected={setWorkSelected} breadcrumbState={breadcrumbState} />
         ) : (
           workSelected ? (
-            <Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
+            <Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState}/>
           ) : (
             resumeSelected ? (
               <div>
                 <Header />
-                <Resume />
+                <Resume resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />
               </div>
             ) : (
               <div>
