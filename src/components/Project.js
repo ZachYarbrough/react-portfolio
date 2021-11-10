@@ -2,6 +2,7 @@ import React from 'react';
 import FadeIn from 'react-fade-in';
 
 const Project = (props) => {
+
     const {
         breadcrumbState,
         projectSelected,
@@ -15,19 +16,27 @@ const Project = (props) => {
     return (
         <FadeIn className='content'>
             <h2 className='font-size-24 font-weight-bold border-bottom'>{projectSelected.name}</h2>
-            <ul class="breadcrumb">
+            <ul className="breadcrumb">
                 {breadcrumbState === 'Work' ? (
-                <li class="breadcrumb-item"><a className='link pointer' onClick={() => {
-                    setProjectSelected(false);
-                    setWorkSelected(true);
-                }}>Work</a></li> 
-                ) : (
-                    <li class="breadcrumb-item"><a className='link pointer' onClick={() => {
+                    <li className="breadcrumb-item"><a className='link pointer' onClick={() => {
                         setProjectSelected(false);
+                        setResumeSelected(false);
+                        setWorkSelected(true);
+                    }}>Work</a></li>
+                ) : breadcrumbState === 'Resume' ? (
+                    <li className="breadcrumb-item"><a className='link pointer' onClick={() => {
+                        setProjectSelected(false);
+                        setWorkSelected(false);
                         setResumeSelected(true);
-                    }}>Resume</a></li> 
+                    }}>Resume</a></li>
+                ) : (
+                    <li className="breadcrumb-item"><a className='link pointer' onClick={() => {
+                        setProjectSelected(false);
+                        setResumeSelected(false);
+                        setWorkSelected(false);
+                    }}>About</a></li>
                 )}
-                <li class="breadcrumb-item active" aria-current="page"><a><span className='font-weight-bold'>{projectSelected.name}</span></a></li>
+                <li className="breadcrumb-item active" aria-current="page"><a><span className='font-weight-bold'>{projectSelected.name}</span></a></li>
             </ul>
             <div>
                 <p>{projectSelected.description}</p>
@@ -69,7 +78,7 @@ const Project = (props) => {
                         alt={projectSelected.name + ' ' + i}
                         className=" project-image img-fluid rounded shadow mt-5"
                     />
-                </div>  
+                </div>
             ))}
         </FadeIn>
     );

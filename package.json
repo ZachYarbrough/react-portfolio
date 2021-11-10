@@ -11,7 +11,6 @@
     "react-dom": "^17.0.2",
     "react-fade-in": "^2.0.1",
     "react-scripts": "4.0.3",
-    "swup": "^2.0.14",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

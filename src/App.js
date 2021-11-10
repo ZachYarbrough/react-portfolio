@@ -185,7 +185,7 @@ function App() {
               ) : (
                 <div>
                   <Header />
-                  <About workSelected={workSelected} setWorkSelected={setWorkSelected} />
+                  <About setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} workSelected={workSelected} setWorkSelected={setWorkSelected} />
                 </div>
               )
             )

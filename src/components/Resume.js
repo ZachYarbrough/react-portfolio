@@ -12,7 +12,6 @@ const Resume = (props) => {
 
     const languages = ['HTML', 'CSS', 'JavaScript', 'C#', 'Swift'];
     const technicalSkills = ['React', 'Git', 'NodeJS', 'ExpressJS', 'MongoDB', 'Jest', 'Bootstrap', 'AJAX', 'MySQL', 'Handlebars', 'Halfmoon'];
-    const nonTechnicalSkills = ['Agile Scrum Methodology', 'Object Oriented Design', 'Model View Controller', 'Flexible Learner'];
 
     return (
         <FadeIn className='content'>
@@ -43,14 +42,6 @@ const Resume = (props) => {
                         ))}
                     </span>
                 </p>
-                <p className='d-flex align-items-start'>
-                    <span className='nowrap-div alert alert-primary mt-5 mr-5 py-0 px-5'>Non Technical</span>
-                    <span className='d-flex flex-wrap'>
-                        {nonTechnicalSkills.map((skill) => (
-                            <span key={skill} className="alert mt-5 mr-5 py-0 px-5">{skill}</span>
-                        ))}
-                    </span>
-                </p>
             </div>
 
             {/* Projects */}
@@ -58,14 +49,14 @@ const Resume = (props) => {
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Projects</h2>
                 <div>
                     <span className='font-size-18 font-weight-bold'>{currentProjects[0].name} - Job Tracking Application</span>
-                    <a onClick={() => {
+                    <button onClick={() => {
                         setResumeSelected(false);
                         setBreadcrumbState('Resume');
                         setProjectSelected(currentProjects[0]);
-                    }} className=' ml-10 btn font-weight-bold d-none d-sm-inline-block'>
-                        <span className='mr-5'>View Project</span>
+                    }} className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
+                        <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
-                    </a>
+                    </button>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
                         <a href={currentProjects[0].website} target='_'>
@@ -88,25 +79,25 @@ const Resume = (props) => {
                             ))}
                         </span>
                     </p>
-                    <a onClick={() => {
+                    <button onClick={() => {
                         setResumeSelected(false);
                         setBreadcrumbState('Resume');
                         setProjectSelected(currentProjects[0]);
-                    }} className=' ml-10 mb-10 btn font-weight-bold d-sm-none d-block'>
-                        <span className='mr-5'>View Project</span>
+                    }} className='mb-10 btn btn-block font-weight-bold d-sm-none d-block'>
+                        <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
-                    </a>
+                    </button>
                 </div>
                 <div>
                     <span className='font-size-18 font-weight-bold'>{currentProjects[2].name} - Music Lyric Quiz</span>
-                    <a onClick={() => {
+                    <button onClick={() => {
                         setResumeSelected(false);
                         setBreadcrumbState('Resume');
                         setProjectSelected(currentProjects[0]);
-                    }} className=' ml-10 btn font-weight-bold d-none d-sm-inline-block'>
-                        <span className='mr-5'>View Project</span>
+                    }} className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
+                        <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
-                    </a>
+                    </button>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
                         <a href={currentProjects[2].website} target='_'>
@@ -129,14 +120,14 @@ const Resume = (props) => {
                             ))}
                         </span>
                     </p>
-                    <a onClick={() => {
+                    <button onClick={() => {
                         setResumeSelected(false);
                         setBreadcrumbState('Resume');
                         setProjectSelected(currentProjects[2]);
-                    }} className=' ml-10 btn font-weight-bold d-sm-none d-block'>
-                        <span className='mr-5'>View Project</span>
+                    }} className='btn btn-block font-weight-bold d-sm-none d-block'>
+                        <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
-                    </a>
+                    </button>
                 </div>
             </div>
 
