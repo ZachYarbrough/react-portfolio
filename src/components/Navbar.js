@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import halfmoon from 'halfmoon';
-import Project from './Project';
 
 const Navbar = (props) => {
 
@@ -48,17 +48,17 @@ const Navbar = (props) => {
                     setContactSelected(false);
                 }} className='navbar-brand'>Zach Yarbrough</a>
                 <ul className='navbar-nav d-none d-sm-flex'>
-                    <li className={`nav-item ${(!workSelected && !resumeSelected && !projectSelected && !contactSelected) && 'navActive'}`}>
-                        <a onClick={() => {
-                            setWorkSelected(false);
-                            setResumeSelected(false);
-                            setProjectSelected(false);
-                            setContactSelected(false);
-                        }} className='nav-link'>
-                            <span>About</span>
-                        </a>
-                    </li>
-                    <li className={`nav-item ${workSelected && 'navActive'}`}>
+                    <Link to='/about' className={`nav-item ${(!workSelected && !resumeSelected && !projectSelected && !contactSelected) && 'navActive'}`}>
+                            <a onClick={() => {
+                                setWorkSelected(false);
+                                setResumeSelected(false);
+                                setProjectSelected(false);
+                                setContactSelected(false);
+                            }} className='nav-link'>
+                                <span>About</span>
+                            </a>
+                    </Link>
+                    <Link to='/work' className={`nav-item ${workSelected && 'navActive'}`}>
                         <a onClick={() => {
                             setWorkSelected(true);
                             setResumeSelected(false);
@@ -67,8 +67,8 @@ const Navbar = (props) => {
                         }} className='nav-link'>
                             <span>Work</span>
                         </a>
-                    </li>
-                    <li className={`nav-item ${contactSelected && 'navActive'}`}>
+                    </Link>
+                    <Link to='/contact' className={`nav-item ${contactSelected && 'navActive'}`}>
                         <a onClick={() => {
                             setWorkSelected(false);
                             setResumeSelected(false);
@@ -77,8 +77,8 @@ const Navbar = (props) => {
                         }} className='nav-link'>
                             <span>Contact</span>
                         </a>
-                    </li>
-                    <li className={`nav-item ${resumeSelected && 'navActive'}`}>
+                    </Link>
+                    <Link to ='/resume' className={`nav-item ${resumeSelected && 'navActive'}`}>
                         <a onClick={() => {
                             setWorkSelected(false);
                             setResumeSelected(true);
@@ -87,7 +87,7 @@ const Navbar = (props) => {
                         }} className='nav-link'>
                             <span>Resume</span>
                         </a>
-                    </li>
+                    </Link>
                     <li className='nav-item'>
                         <a href='https://github.com/ZachYarbrough/react-portfolio' target="_" className='nav-link'>
                             <i className='fa fa-code-fork mr-5' />

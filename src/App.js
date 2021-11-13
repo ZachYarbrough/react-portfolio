@@ -1,17 +1,20 @@
 import 'halfmoon/css/halfmoon-variables.min.css';
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import StickyAlerts from './components/StickyAlerts';
 import Navbar from './components/Navbar';
-import Work from './components/Work';
-import Project from './components/Project';
 import Header from './components/Header';
-import Resume from './components/Resume';
-import About from './components/About';
 import ScrollButton from './components/ScrollButton';
 import Footer from './components/Footer';
-import Contact from './components/Contact';
+
+import Resume from './pages/Resume';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Project from './pages/Project';
+import Work from './pages/Work';
+import NoMatch from './pages/NoMatch';
 
 
 import reploy0 from './assets/images/projects/0.png';
@@ -165,32 +168,16 @@ function App() {
       <StickyAlerts />
       <Navbar handleDropDown={handleDropDown} contactSelected={contactSelected} setContactSelected={setContactSelected} workSelected={workSelected} setWorkSelected={setWorkSelected} resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
       <main className='content-wrapper'>
-        {projectSelected ? (
-          <Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} setResumeSelected={setResumeSelected} setWorkSelected={setWorkSelected} breadcrumbState={breadcrumbState} />
-        ) : (
-          workSelected ? (
-            <Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />
-          ) : (
-            resumeSelected ? (
-              <div>
-                <Header />
-                <Resume resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />
-              </div>
-            ) : (
-              contactSelected ? (
-                <div>
-                  <Header />
-                  <Contact />
-                </div>
-              ) : (
-                <div>
-                  <Header />
-                  <About setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} workSelected={workSelected} setWorkSelected={setWorkSelected} />
-                </div>
-              )
-            )
-          )
-        )}
+        <Header />
+        <Routes>
+          <Route path='/work' element={<Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />} />
+          <Route path='/about' element={<About setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} workSelected={workSelected} setWorkSelected={setWorkSelected} />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path={`/${breadcrumbState}/${projectSelected.name}`} element={<Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} setResumeSelected={setResumeSelected} setWorkSelected={setWorkSelected} breadcrumbState={breadcrumbState} />} />
+          <Route path={`/resume`} element={<Resume resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />} />
+
+          <Route element={<NoMatch />} />
+        </Routes>
         <ScrollButton topBtnVisible={topBtnVisible} />
         <Footer />
         <div className='navbar-spacer'></div>

@@ -58,37 +58,6 @@ const About = (props) => {
                     </a>
                 </p>
             </div>
-            <h2 className='font-size-24 font-weight-bold border-bottom'>Featured Projects</h2>
-            <div className='row justify-content-center'>
-                        <div onClick={() => {
-                            setProjectSelected(currentProjects[0]);
-                            setBreadcrumbState('About');
-                        }} className='col-md-5 col-sm-12 m-10 text-center pointer' key={currentProjects[0].name}>
-                            <img
-                                src={require(`../assets/images/projects/0.png`).default}
-                                alt={currentProjects[0].name}
-                                className=" project-image img-fluid rounded shadow"
-                            />
-                            <p className='ml-auto'>
-                                <span className='font-size-22'>{currentProjects[0].name}</span><br />
-                                <span>{currentProjects[0].shortDescription}</span>
-                            </p>
-                        </div>
-                        <div onClick={() => {
-                            setProjectSelected(currentProjects[1]);
-                            setBreadcrumbState('About');
-                        }} className='col-md-5 col-sm-12 m-10 text-center pointer' key={currentProjects[1].name}>
-                            <img
-                                src={require(`../assets/images/projects/1.png`).default}
-                                alt={currentProjects[1].name}
-                                className=" project-image img-fluid rounded shadow"
-                            />
-                            <p className='ml-auto'>
-                                <span className='font-size-22'>{currentProjects[1].name}</span><br />
-                                <span>{currentProjects[1].shortDescription}</span>
-                            </p>
-                        </div>
-                </div>
         </FadeIn>
     );
 }
