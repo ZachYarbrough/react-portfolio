@@ -12,8 +12,9 @@ const Work = (props) => {
 
     return (
         <FadeIn className='content'>
-                <h2 className='font-size-24 font-weight-bold border-bottom'>Work</h2>
-                <ProjectList currentProjects={currentProjects} setProjectSelected={setProjectSelected} setBreadcrumbState={setBreadcrumbState} />
+            <div className='navbar-spacer'></div>
+            <h2 className='font-size-24 font-weight-bold border-bottom'>Work</h2>
+            <ProjectList currentProjects={currentProjects} setProjectSelected={setProjectSelected} setBreadcrumbState={setBreadcrumbState} />
         </FadeIn>
     );
 }

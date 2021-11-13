@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import FadeIn from 'react-fade-in';
 
 
 const ScrollButton = (props) => {
 
     const {
-        topBtnVisible,
-        setTopBtnVisible
+        topBtnVisible
     } = props;
 
     const scrollTop = () => {

@@ -2,9 +2,10 @@
     --base-border-radius: 1rem;
     --base-font-size: 1.6rem;
     --lm-base-text-color: #474747;
+    --dm-base-text-color: #fefefe;
     --lm-navbar-brand-text-color-hover: #2e2d2d;
     --lm-base-bg-color: #b3d4fc;
-    --dm-basae-bg-color: #202124;
+    --dm-base-bg-color: #202124;
     --lm-alert-success-border-color: #0ac46d;
 
     --lm-navbar-link-text-color-hover: #c057bb;
@@ -103,7 +104,7 @@ a:hover {
 
 .navActive span,
 .navActive i {
-    color: var(--lm-link-text-color-hover);
+    color: var(--lm-link-text-color);
 }
 
 .nav-link,
@@ -111,8 +112,10 @@ a:hover {
     padding-bottom: 2px;
 }
 
+
 .nav-link:hover span,
 .link:hover {
+    color: var(--lm-link-text-color-hover);
     border-bottom: solid var(--lm-navbar-link-text-color-hover) 1px;
     padding-bottom: 0;
 }

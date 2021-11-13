@@ -1,12 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
 
 const ProjectList = (props) => {
 
     const {
-        currentProjects,
-        setProjectSelected,
-        setBreadcrumbState
+        currentProjects
     } = props;
 
     return (
@@ -14,10 +13,7 @@ const ProjectList = (props) => {
             <div className='container-fluid'>
                 <div className='row justify-content-center'>
                     {currentProjects.map((project, i) => (
-                        <div onClick={() => {
-                            setProjectSelected(project);
-                            setBreadcrumbState('Work');
-                        }} className='col-md-5 col-sm-12 m-10 text-center pointer' key={project.name}>
+                        <Link to={`/work/${project.name.toLowerCase()}`} className='col-md-5 col-sm-12 m-10 text-center pointer' key={project.name}>
                             <img
                                 src={require(`../assets/images/projects/${i}.png`).default}
                                 alt={project.name}
@@ -27,7 +23,7 @@ const ProjectList = (props) => {
                                 <span className='font-size-22'>{project.name}</span><br />
                                 <span>{project.shortDescription}</span>
                             </p>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

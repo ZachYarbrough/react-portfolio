@@ -26,10 +26,7 @@ import taskinator0 from './assets/images/projects/3.png';
 
 function App() {
 
-  const [workSelected, setWorkSelected] = useState(false);
-  const [resumeSelected, setResumeSelected] = useState(false);
   const [projectSelected, setProjectSelected] = useState(false);
-  const [contactSelected, setContactSelected] = useState(false);
   const [topBtnVisible, setTopBtnVisible] = useState(false);
   const [breadcrumbState, setBreadcrumbState] = useState('Work');
 
@@ -121,13 +118,6 @@ function App() {
   }
 
   useEffect(() => {
-    const dropdown = document.querySelector('.dropdown');
-
-    window.scrollTo({ top: 0, behavior: 'instant' });
-    if (dropdown.classList.contains('show')) dropdown.classList.remove('show');
-  }, [workSelected, resumeSelected, projectSelected, contactSelected]);
-
-  useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
@@ -166,17 +156,35 @@ function App() {
   return (
     <div className="page-wrapper with-navbar">
       <StickyAlerts />
-      <Navbar handleDropDown={handleDropDown} contactSelected={contactSelected} setContactSelected={setContactSelected} workSelected={workSelected} setWorkSelected={setWorkSelected} resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} projectSelected={projectSelected} setProjectSelected={setProjectSelected} />
+      <Navbar handleDropDown={handleDropDown} />
       <main className='content-wrapper'>
-        <Header />
         <Routes>
-          <Route path='/work' element={<Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />} />
-          <Route path='/about' element={<About setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} workSelected={workSelected} setWorkSelected={setWorkSelected} />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path={`/${breadcrumbState}/${projectSelected.name}`} element={<Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} setResumeSelected={setResumeSelected} setWorkSelected={setWorkSelected} breadcrumbState={breadcrumbState} />} />
-          <Route path={`/resume`} element={<Resume resumeSelected={resumeSelected} setResumeSelected={setResumeSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />} />
+          <Route index element={
+            <div>
+              <Header />
+              <About />
+            </div>
+          } />
+          <Route path='/work' element={
+            <Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />
+          } />
+          <Route path='/contact' element={
+            <div>
+              <Header />
+              <Contact />
+            </div>
+          } />
+          <Route path={`/work/${projectSelected.name}`} element={
+            <Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} breadcrumbState={breadcrumbState} />
+          } />
+          <Route path={`/resume`} element={
+            <div>
+              <Header />
+              <Resume setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />
+            </div>
+          } />
 
-          <Route element={<NoMatch />} />
+          <Route path='*' element={<NoMatch />} />
         </Routes>
         <ScrollButton topBtnVisible={topBtnVisible} />
         <Footer />

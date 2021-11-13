@@ -98,7 +98,7 @@ const Resume = (props) => {
                         <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
                     </button>
-                    <p className='d-flex align-items-start'>
+                    <p className='d-flex align-items-start link-wrapper'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
                         <a href={currentProjects[2].website} target='_'>
                             <span className='mr-5 link text-break'>{currentProjects[2].website}</span>

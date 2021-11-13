@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
 
 const Project = (props) => {
@@ -6,35 +7,17 @@ const Project = (props) => {
     const {
         breadcrumbState,
         projectSelected,
-        setResumeSelected,
-        setProjectSelected,
-        setWorkSelected
     } = props;
-
-    setWorkSelected(false);
 
     return (
         <FadeIn className='content'>
+            <div className='navbar-spacer'></div>
             <h2 className='font-size-24 font-weight-bold border-bottom'>{projectSelected.name}</h2>
             <ul className="breadcrumb">
                 {breadcrumbState === 'Work' ? (
-                    <li className="breadcrumb-item"><a className='link pointer' onClick={() => {
-                        setProjectSelected(false);
-                        setResumeSelected(false);
-                        setWorkSelected(true);
-                    }}>Work</a></li>
-                ) : breadcrumbState === 'Resume' ? (
-                    <li className="breadcrumb-item"><a className='link pointer' onClick={() => {
-                        setProjectSelected(false);
-                        setWorkSelected(false);
-                        setResumeSelected(true);
-                    }}>Resume</a></li>
+                    <Link to='/work' className='breadcrumb-item link pointer'>Work</Link>
                 ) : (
-                    <li className="breadcrumb-item"><a className='link pointer' onClick={() => {
-                        setProjectSelected(false);
-                        setResumeSelected(false);
-                        setWorkSelected(false);
-                    }}>About</a></li>
+                    <Link to='/resume' className='breadcrumb-item link pointer'>Resume</Link>
                 )}
                 <li className="breadcrumb-item active" aria-current="page"><a><span className='font-weight-bold'>{projectSelected.name}</span></a></li>
             </ul>
