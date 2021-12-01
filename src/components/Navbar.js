@@ -75,9 +75,6 @@ const Navbar = (props) => {
                         <NavLink to='/work' className="dropdown-item is-dropdown">
                             <span className='is-dropdown'>Work</span>
                         </NavLink>
-                        <NavLink to='/contact' className="dropdown-item is-dropdown">
-                            <span className='is-dropdown'>Contact</span>
-                        </NavLink>
                         <NavLink to='/resume' className="dropdown-item is-dropdown">
                             <span className='is-dropdown'>Resume</span>
                         </NavLink>

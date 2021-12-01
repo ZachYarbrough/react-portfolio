@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import FadeIn from 'react-fade-in';
 
 const Resume = (props) => {
@@ -49,14 +50,12 @@ const Resume = (props) => {
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Projects</h2>
                 <div>
                     <span className='font-size-18 font-weight-bold'>{currentProjects[0].name} - Job Tracking Application</span>
-                    <button onClick={() => {
-                        setResumeSelected(false);
+                    <Link to={`/resume/${currentProjects[0].name.toLowerCase()}`} onClick={() => {
                         setBreadcrumbState('Resume');
-                        setProjectSelected(currentProjects[0]);
                     }} className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
                         <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
-                    </button>
+                    </Link>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
                         <a href={currentProjects[0].website} target='_'>
@@ -79,55 +78,49 @@ const Resume = (props) => {
                             ))}
                         </span>
                     </p>
-                    <button onClick={() => {
-                        setResumeSelected(false);
+                    <Link to={`/resume/${currentProjects[0].name.toLowerCase()}`} onClick={() => {
                         setBreadcrumbState('Resume');
-                        setProjectSelected(currentProjects[0]);
-                    }} className='mb-10 btn btn-block font-weight-bold d-sm-none d-block'>
+                    }} className='btn btn-block font-weight-bold d-sm-none d-block'>
                         <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
-                    </button>
+                    </Link>
                 </div>
                 <div>
-                    <span className='font-size-18 font-weight-bold'>{currentProjects[2].name} - Music Lyric Quiz</span>
-                    <button onClick={() => {
-                        setResumeSelected(false);
+                    <span className='font-size-18 font-weight-bold'>{currentProjects[4].name}</span>
+                    <Link to={`/resume/${currentProjects[4].name.toLowerCase()}`} onClick={() => {
                         setBreadcrumbState('Resume');
-                        setProjectSelected(currentProjects[0]);
                     }} className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
                         <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
-                    </button>
+                    </Link>
                     <p className='d-flex align-items-start link-wrapper'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
-                        <a href={currentProjects[2].website} target='_'>
-                            <span className='mr-5 link text-break'>{currentProjects[2].website}</span>
+                        <a href={currentProjects[4].website} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[4].website}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Source</span>
-                        <a href={currentProjects[2].source} target='_'>
-                            <span className='mr-5 link text-break'>{currentProjects[2].source}</span>
+                        <a href={currentProjects[4].source} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[4].source}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-5 py-0 px-5'>Stack</span>
                         <span className='d-flex flex-wrap'>
-                            {currentProjects[2].stack.map((stack) => (
+                            {currentProjects[4].stack.map((stack) => (
                                 <span key={stack} className="alert mr-5 py-0 px-5">{stack}</span>
                             ))}
                         </span>
                     </p>
-                    <button onClick={() => {
-                        setResumeSelected(false);
+                    <Link to={`/resume/${currentProjects[4].name.toLowerCase()}`} onClick={() => {
                         setBreadcrumbState('Resume');
-                        setProjectSelected(currentProjects[2]);
                     }} className='btn btn-block font-weight-bold d-sm-none d-block'>
                         <span className='mr-5'>More Info</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
-                    </button>
+                    </Link>
                 </div>
             </div>
 

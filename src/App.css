@@ -97,6 +97,14 @@ a:hover {
     box-shadow: none;
 }
 
+.dark-mode .ml-auto {
+    color: var(--dm-base-text-color) !important;
+}
+
+.ml-auto {
+    color: var(--lm-base-text-color) !important;
+}
+
 .dark-mode .navActive span,
 .dark-mode .navActive i {
     color: var(--dm-link-text-color-hover);
