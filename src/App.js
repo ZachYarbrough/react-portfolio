@@ -11,7 +11,6 @@ import Footer from './components/Footer';
 
 import Resume from './pages/Resume';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Project from './pages/Project';
 import Work from './pages/Work';
 import NoMatch from './pages/NoMatch';
@@ -20,6 +19,7 @@ import NoMatch from './pages/NoMatch';
 import reploy0 from './assets/images/projects/0.png';
 import reploy1 from './assets/images/reploy/1.png';
 import weatherDashboard0 from './assets/images/projects/1.png';
+import rnr0 from './assets/images/projects/1.png';
 import lyricado0 from './assets/images/projects/2.png';
 import lyricado1 from './assets/images/lyricado/1.png';
 import taskinator0 from './assets/images/projects/3.png';
@@ -43,6 +43,18 @@ function App() {
         reploy1
       ],
       stack: ['Handlebars', 'MySQL', 'ExpressJS', 'NodeJS']
+    },
+    {
+      name: 'Relief and Rotation',
+      shortDescription: "A relief scheduling application",
+      description: "A calendar that makes it easy for employees to .",
+      website: 'https://www.reliefandrotations.com',
+      source: 'https://github.com/itorres60/Project_III',
+      platform: ['Web'],
+      images: [
+        rnr0
+      ],
+      stack: ['React', 'MongoDB', 'GraphQL', 'Express']
     },
     {
       name: 'Weather Dashboard',
@@ -167,12 +179,6 @@ function App() {
           } />
           <Route path='/work' element={
             <Work projectSelected={projectSelected} setProjectSelected={setProjectSelected} currentProjects={currentProjects} setBreadcrumbState={setBreadcrumbState} />
-          } />
-          <Route path='/contact' element={
-            <div>
-              <Header />
-              <Contact />
-            </div>
           } />
           <Route path={`/work/${projectSelected.name}`} element={
             <Project projectSelected={projectSelected} setProjectSelected={setProjectSelected} breadcrumbState={breadcrumbState} />
