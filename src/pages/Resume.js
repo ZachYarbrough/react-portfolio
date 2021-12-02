@@ -6,13 +6,11 @@ const Resume = (props) => {
 
     const {
         currentProjects,
-        setResumeSelected,
-        setBreadcrumbState,
-        setProjectSelected
+        setBreadcrumbState
     } = props
 
     const languages = ['HTML', 'CSS', 'JavaScript', 'C#', 'Swift'];
-    const technicalSkills = ['React', 'Git', 'NodeJS', 'ExpressJS', 'MongoDB', 'Jest', 'Bootstrap', 'AJAX', 'MySQL', 'Handlebars', 'Halfmoon'];
+    const technicalSkills = ['React', 'Git', 'NodeJS', 'ExpressJS', 'MongoDB', 'GraphQL', 'Jest', 'Bootstrap', 'AJAX', 'MySQL', 'Handlebars', 'Halfmoon'];
 
     return (
         <FadeIn className='content'>
