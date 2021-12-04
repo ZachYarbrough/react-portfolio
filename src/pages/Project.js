@@ -60,6 +60,7 @@ const Project = (props) => {
                     <img
                         src={image}
                         alt={currentProject[0].name + ' ' + i}
+                        loading="lazy"
                         className=" project-image img-fluid rounded shadow mt-5"
                     />
                 </div>
