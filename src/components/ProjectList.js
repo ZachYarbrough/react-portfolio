@@ -20,6 +20,7 @@ const ProjectList = (props) => {
                                 <img
                                     src={require(`../assets/images/projects/${i}.png`).default}
                                     alt={project.name}
+                                    loading="lazy"
                                     className=" project-image img-fluid rounded shadow"
                                 />
                                 <p className='ml-auto'>
