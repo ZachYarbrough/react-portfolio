@@ -18,11 +18,11 @@ import NoMatch from './pages/NoMatch';
 
 import reploy0 from './assets/images/projects/0.png';
 import reploy1 from './assets/images/reploy/1.png';
-import weatherDashboard0 from './assets/images/projects/1.png';
-import rnr0 from './assets/images/projects/4.png';
-import lyricado0 from './assets/images/projects/2.png';
+import weatherDashboard0 from './assets/images/projects/2.png';
+import rnr0 from './assets/images/projects/1.png';
+import lyricado0 from './assets/images/projects/3.png';
 import lyricado1 from './assets/images/lyricado/1.png';
-import taskinator0 from './assets/images/projects/3.png';
+import taskinator0 from './assets/images/projects/4.png';
 
 function App() {
 
@@ -43,6 +43,18 @@ function App() {
         reploy1
       ],
       stack: ['Handlebars', 'MySQL', 'ExpressJS', 'NodeJS']
+    },
+    {
+      name: 'Relief and Rotation',
+      shortDescription: "A relief scheduling application",
+      description: "A calendar that makes it easy for employees to keep track of employee's schedules and relief requests.",
+      website: 'https://www.reliefandrotations.com',
+      source: 'https://github.com/itorres60/Project_III',
+      platform: ['Web'],
+      images: [
+        rnr0
+      ],
+      stack: ['React', 'MongoDB', 'GraphQL', 'Express']
     },
     {
       name: 'Weather Dashboard',
@@ -80,18 +92,6 @@ function App() {
         taskinator0
       ],
       stack: ['HTML', 'CSS', 'JavaScript']
-    },
-    {
-      name: 'Relief and Rotation',
-      shortDescription: "A relief scheduling application",
-      description: "A calendar that makes it easy for employees to .",
-      website: 'https://www.reliefandrotations.com',
-      source: 'https://github.com/itorres60/Project_III',
-      platform: ['Web'],
-      images: [
-        rnr0
-      ],
-      stack: ['React', 'MongoDB', 'GraphQL', 'Express']
     }
   ]
 
