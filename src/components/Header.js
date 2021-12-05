@@ -17,7 +17,7 @@ const Header = () => {
                         </span>
                     </a>
                 </div>
-                <img src={require('../assets/images/profile-image.png').default} className="ml-auto mr-20 img-fluid border rounded-circle w-100 h-100" alt="Profile" />
+                <img src={require('../assets/images/profile-image.png').default} loading="lazy" className="ml-auto mr-20 img-fluid border rounded-circle w-100 h-100" alt="Profile" />
             </div>
 
             {/* Header - Small */}
@@ -28,7 +28,7 @@ const Header = () => {
                             <i className='fa fa-download mr-5'></i>
                             <span>Download Resume</span>
                     </a>
-                <img src={require('../assets/images/profile-image.png').default} loading="lazy" sclassName="mx-auto mt-20 mb-0 img-fluid border rounded-circle w-100 h-100" alt="Profile" />
+                <img src={require('../assets/images/profile-image.png').default} loading="lazy" className="mx-auto mt-20 mb-0 img-fluid border rounded-circle w-100 h-100" alt="Profile" />
             </div>
         </FadeIn>
     );
