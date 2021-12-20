@@ -84,8 +84,8 @@ const Resume = (props) => {
                     </Link>
                 </div>
                 <div>
-                    <span className='font-size-18 font-weight-bold'>{currentProjects[4].name}</span>
-                    <Link to={`/resume/${currentProjects[4].name.toLowerCase()}`} onClick={() => {
+                    <span className='font-size-18 font-weight-bold'>{currentProjects[1].name}</span>
+                    <Link to={`/resume/${currentProjects[1].name.toLowerCase()}`} onClick={() => {
                         setBreadcrumbState('Resume');
                     }} className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
                         <span className='mr-5'>More Info</span>
@@ -93,27 +93,27 @@ const Resume = (props) => {
                     </Link>
                     <p className='d-flex align-items-start link-wrapper'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
-                        <a href={currentProjects[4].website} target='_'>
-                            <span className='mr-5 link text-break'>{currentProjects[4].website}</span>
+                        <a href={currentProjects[1].website} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[1].website}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Source</span>
-                        <a href={currentProjects[4].source} target='_'>
-                            <span className='mr-5 link text-break'>{currentProjects[4].source}</span>
+                        <a href={currentProjects[1].source} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[1].source}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-5 py-0 px-5'>Stack</span>
                         <span className='d-flex flex-wrap'>
-                            {currentProjects[4].stack.map((stack) => (
+                            {currentProjects[1].stack.map((stack) => (
                                 <span key={stack} className="alert mr-5 py-0 px-5">{stack}</span>
                             ))}
                         </span>
                     </p>
-                    <Link to={`/resume/${currentProjects[4].name.toLowerCase()}`} onClick={() => {
+                    <Link to={`/resume/${currentProjects[1].name.toLowerCase()}`} onClick={() => {
                         setBreadcrumbState('Resume');
                     }} className='btn btn-block font-weight-bold d-sm-none d-block'>
                         <span className='mr-5'>More Info</span>
