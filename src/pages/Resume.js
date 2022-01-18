@@ -125,13 +125,28 @@ const Resume = (props) => {
             {/* Experience */}
             <div className='d-flex flex-column'>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Experience</h2>
-                <span className='font-size-18 font-weight-bold'>StoryFit</span>
+                <span className='font-size-18 font-weight-bold'>StoryFit - Screenplay Analyist</span>
                 <div className='d-flex flex-column align-items-start'>
                     <p className='d-flex align-items-start flex-wrap'>
                         <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Intern</span>
                         <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Jan 2020 - May 2020</span>
                     </p>
                     <span>Utilized critical thinking to regulate movie scripts and format them correctly to ensure AI runs smoothly when determining optimal markets and audience</span>
+                </div>
+                <span className='font-size-18 font-weight-bold mt-10'>Freelance Work</span>
+                <div className='d-flex flex-column align-items-start'>
+                    <p className='d-flex align-items-start flex-wrap'>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>2021 - Present</span>
+                    </p>
+                    <span>Work on the back end of projects using the MERN stack, primarily focusing on MongoDB, GraphQL, and Express</span>
+                </div>
+                <span className='font-size-18 font-weight-bold mt-10'>2U Education - Teaching Assistant</span>
+                <div className='d-flex flex-column align-items-start'>
+                    <p className='d-flex align-items-start flex-wrap'>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Part-Time</span>
+                        <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Jan 2022 - Present</span>
+                    </p>
+                    <span>Assist students enrolled in the UT Coding Bootcamp and answer questions pertaining to full stack development</span>
                 </div>
             </div>
 
