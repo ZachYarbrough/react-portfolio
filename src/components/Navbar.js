@@ -78,7 +78,7 @@ const Navbar = (props) => {
                         <NavLink to='/resume' className="dropdown-item is-dropdown">
                             <span className='is-dropdown'>Resume</span>
                         </NavLink>
-                        <a href="https://github.com/ZachYarbrough/react-portfolio" target='_' className="dropdown-item is-dropdown">
+                        <a href="https://github.com/ZachYarbrough/zachyarbrough.github.io" target='_' className="dropdown-item is-dropdown">
                             <i className='fa fa-code-fork mr-5 is-dropdown' aria-hidden='true' />
                             <span className='is-dropdown'>Source</span>
                         </a>

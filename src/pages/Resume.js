@@ -9,7 +9,7 @@ const Resume = (props) => {
         setBreadcrumbState
     } = props
 
-    const languages = ['HTML', 'CSS', 'JavaScript', 'C#', 'Swift'];
+    const languages = ['HTML', 'CSS', 'JavaScript', 'Solidity', 'Java', 'C#', 'Swift'];
     const technicalSkills = ['React', 'Git', 'NodeJS', 'ExpressJS', 'MongoDB', 'GraphQL', 'Jest', 'Bootstrap', 'AJAX', 'MySQL', 'Handlebars', 'Halfmoon'];
 
     return (
