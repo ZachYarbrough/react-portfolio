@@ -45,7 +45,7 @@ const Navbar = (props) => {
                         <span>Resume</span>
                     </NavLink>
                     <li className='nav-item'>
-                        <a href='https://github.com/ZachYarbrough/react-portfolio' target="_" className='nav-link'>
+                        <a href='https://github.com/ZachYarbrough/zachyarbrough.github.io' target="_" className='nav-link'>
                             <i className='fa fa-code-fork mr-5' />
                             <span>Source</span>
                         </a>
