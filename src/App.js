@@ -16,13 +16,19 @@ import Work from './pages/Work';
 import NoMatch from './pages/NoMatch';
 
 
-import reploy0 from './assets/images/projects/0.png';
+import reploy0 from './assets/images/projects/1.png';
 import reploy1 from './assets/images/reploy/1.png';
-import weatherDashboard0 from './assets/images/projects/2.png';
+import weatherDashboard0 from './assets/images/projects/3.png';
 import rnr0 from './assets/images/projects/1.png';
-import lyricado0 from './assets/images/projects/3.png';
+import lyricado0 from './assets/images/projects/4.png';
 import lyricado1 from './assets/images/lyricado/1.png';
-import taskinator0 from './assets/images/projects/4.png';
+import taskinator0 from './assets/images/projects/5.png';
+import cards0 from './assets/images/projects/0.png';
+import cards1 from './assets/images/10kcards/2.png';
+import cards2 from './assets/images/10kcards/3.png';
+import cards3 from './assets/images/10kcards/4.png';
+import cards4 from './assets/images/10kcards/5.png';
+import cards5 from './assets/images/10kcards/6.png';
 
 function App() {
 
@@ -31,6 +37,22 @@ function App() {
   const [breadcrumbState, setBreadcrumbState] = useState('Work');
 
   const currentProjects = [
+    {
+      name: '10K Cards',
+      shortDescription: "Digital Busniess Cards for Professionals",
+      description: "Freelance work for the company 10k Cards. They wanted an edit form that is similar to their product so I recreated it with interactive inputs and I also integrated stripe payments. I built and deployed this app using AWS services (EC2, ACM, ELB, etc.)",
+      website: 'https://10kcards.com',
+      platform: ['Web'],
+      images: [
+        cards0,
+        cards1,
+        cards2,
+        cards3,
+        cards4,
+        cards5
+      ],
+      stack: ['React', 'MUI', 'ExpressJS', 'NodeJS', 'Stripe', 'AWS' ]
+    },
     {
       name: 'Reploy',
       shortDescription: "A job application tracker",

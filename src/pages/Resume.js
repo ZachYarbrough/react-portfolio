@@ -57,14 +57,7 @@ const Resume = (props) => {
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
                         <a href={currentProjects[0].website} target='_'>
-                            <span className='mr-5 link text-break'>{currentProjects[0].source}</span>
-                            <i className='fa fa-external-link-alt' aria-hidden="true"></i>
-                        </a>
-                    </p>
-                    <p className='d-flex align-items-start'>
-                        <span className='alert alert-primary mr-10 py-0 px-5'>Source</span>
-                        <a href={currentProjects[0].source} target='_'>
-                            <span className='mr-5 link text-break'>{currentProjects[0].source}</span>
+                            <span className='mr-5 link text-break'>{currentProjects[0].website}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>

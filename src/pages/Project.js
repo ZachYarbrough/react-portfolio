@@ -31,13 +31,16 @@ const Project = (props) => {
                         <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                     </a>
                 </p>
-                <p className='d-flex align-items-start'>
-                    <span className='alert alert-primary mr-5 py-0 px-5'>Source</span>
-                    <a href={`${currentProject[0].source}`} target='_'>
-                        <span className='mr-5 link text-break'>{currentProject[0].source}</span>
-                        <i className='fa fa-external-link-alt' aria-hidden="true"></i>
-                    </a>
-                </p>
+                {currentProject[0].source ? 
+                                <p className='d-flex align-items-start'>
+                                <span className='alert alert-primary mr-5 py-0 px-5'>Source</span>
+                                <a href={`${currentProject[0].source}`} target='_'>
+                                    <span className='mr-5 link text-break'>{currentProject[0].source}</span>
+                                    <i className='fa fa-external-link-alt' aria-hidden="true"></i>
+                                </a>
+                            </p>
+                            :
+                            null}
                 <p className='d-flex align-items-start'>
                     <span className='alert alert-primary mr-5 py-0 px-5'>Platform</span>
                     <div className='d-flex flex-wrap'>
