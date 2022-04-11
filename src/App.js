@@ -51,7 +51,7 @@ function App() {
         cards4,
         cards5
       ],
-      stack: ['React', 'MUI', 'ExpressJS', 'NodeJS', 'Stripe', 'AWS' ]
+      stack: ['React', 'MUI', 'ExpressJS', 'NodeJS', 'Stripe', 'Multer', 'AWS' ]
     },
     {
       name: 'Reploy',
