@@ -41,7 +41,7 @@ function App() {
       name: '10K Cards',
       shortDescription: "Digital Busniess Cards for Professionals",
       description: "Freelance work for the company 10k Cards. They wanted an edit form that is similar to their product so I recreated it with interactive inputs and I also integrated stripe payments. I built and deployed this app using AWS services (EC2, ACM, ELB, etc.)",
-      website: 'https://10kcards.com',
+      website: 'http://54.90.58.65/',
       platform: ['Web'],
       images: [
         cards0,
