@@ -16,19 +16,21 @@ import Work from './pages/Work';
 import NoMatch from './pages/NoMatch';
 
 
-import reploy0 from './assets/images/projects/1.png';
+import reploy0 from './assets/images/projects/2.png';
 import reploy1 from './assets/images/reploy/1.png';
-import weatherDashboard0 from './assets/images/projects/3.png';
-import rnr0 from './assets/images/projects/1.png';
-import lyricado0 from './assets/images/projects/4.png';
+import weatherDashboard0 from './assets/images/projects/4.png';
+import rnr0 from './assets/images/projects/3.png';
+import lyricado0 from './assets/images/projects/5.png';
 import lyricado1 from './assets/images/lyricado/1.png';
-import taskinator0 from './assets/images/projects/5.png';
-import cards0 from './assets/images/projects/0.png';
+import taskinator0 from './assets/images/projects/6.png';
+import cards0 from './assets/images/projects/1.png';
 import cards1 from './assets/images/10kcards/2.png';
 import cards2 from './assets/images/10kcards/3.png';
 import cards3 from './assets/images/10kcards/4.png';
 import cards4 from './assets/images/10kcards/5.png';
 import cards5 from './assets/images/10kcards/6.png';
+import swig0 from './assets/images/projects/0.png';
+import swig1 from './assets/images/swigrig/1.png';
 
 function App() {
 
@@ -37,6 +39,18 @@ function App() {
   const [breadcrumbState, setBreadcrumbState] = useState('Work');
 
   const currentProjects = [
+    {
+      name: 'Texas Swig Rig',
+      shortDescription: "Mobile Event Bar",
+      description: "Freelance work for a small buiness named Swig Rig. Built the gallery in with a masonry layout, create the backend to allow the client to log into an admin panel and Create, Update, and Delete photos that are being stored in an S3 bucket.",
+      website: 'https://www.texasswigrig.com',
+      platform: ['Web'],
+      images: [
+        swig0,
+        swig1
+      ],
+      stack: ['React', 'MUI', 'ExpressJS', 'NodeJS', 'Multer', 'Heroku', 'AWS S3' ]
+    },
     {
       name: '10K Cards',
       shortDescription: "Digital Busniess Cards for Professionals",
