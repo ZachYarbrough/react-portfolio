@@ -10,7 +10,7 @@ const Header = () => {
                 <div>
                     <h1 className='mb-0'>Zach Yarbrough</h1>
                     <a href={require('../assets/zach-yarbrough-resume.pdf').default} download='Zach Yarbrough Resume' onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} className="download-resume badge-group mt-5" role="group" aria-label="...">
-                        <span className="badge">Full Stack Developer based in Austin</span>
+                        <span className="badge">Full Stack Developer based in Texas</span>
                         <span className="badge badge-primary">
                             <i className='fa fa-download mr-5'></i>
                             <span>Download Resume</span>
@@ -23,7 +23,7 @@ const Header = () => {
             {/* Header - Small */}
             <div className='d-sm-none d-flex text-center flex-column'>
                     <h1 className='mb-0'>Zach Yarbrough</h1>
-                    <span className="badge">Full Stack Developer based in Austin</span>
+                    <span className="badge">Full Stack Developer based in Texas</span>
                     <a href={require('../assets/zach-yarbrough-resume.pdf').default} download='Zach Yarbrough Resume' onClick={() => halfmoon.toastAlert('precompiled-alert-resume', 5000)} className="download-resume badge badge-primary mt-5" role="group" aria-label="...">
                             <i className='fa fa-download mr-5'></i>
                             <span>Download Resume</span>

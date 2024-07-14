@@ -18,7 +18,7 @@ const ProjectList = (props) => {
                             }} className='col-md-5 col-sm-12 m-10 text-center pointer' key={project.name}
                                 onClick={() => setBreadcrumbState('Work')}>
                                 <img
-                                    src={require(`../assets/images/projects/${i}.png`).default}
+                                    src={require(`../assets/images/${project.link}/1.png`).default}
                                     alt={project.name}
                                     loading="lazy"
                                     className=" project-image img-fluid rounded shadow"

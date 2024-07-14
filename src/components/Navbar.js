@@ -24,11 +24,7 @@ const Navbar = (props) => {
             handleDarkMode();
             halfmoon.toggleDarkMode();
         }
-        document.addEventListener("mousedown", handleDropDown);
-        return () => {
-            document.removeEventListener("mousedown", handleDropDown);
-        };
-    });
+    })
 
     return (
         <nav className='navbar'>
@@ -64,18 +60,18 @@ const Navbar = (props) => {
             </div>
 
             <div className="navbar-content d-sm-none">
-                <div className="dropdown">
-                    <button className=" btn btn-square" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1" aria-label="dropdown">
+                <div className='dropdown'>
+                    <button className=" btn btn-square" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1" aria-label="dropdown" onClick={handleDropDown}>
                         <i className="fa fa-bars" aria-hidden="true"></i>
                     </button>
                     <div className="dropdown-menu dropdown-menu-right w-200 z-50" aria-labelledby="navbar-dropdown-toggle-btn-1">
-                        <NavLink to='/' className="dropdown-item is-dropdown">
+                        <NavLink to='/' className="dropdown-item is-dropdown" onClick={handleDropDown}>
                             <span className='is-dropdown'>About</span>
                         </NavLink>
-                        <NavLink to='/work' className="dropdown-item is-dropdown">
+                        <NavLink to='/work' className="dropdown-item is-dropdown" onClick={handleDropDown}>
                             <span className='is-dropdown'>Work</span>
                         </NavLink>
-                        <NavLink to='/resume' className="dropdown-item is-dropdown">
+                        <NavLink to='/resume' className="dropdown-item is-dropdown" onClick={handleDropDown}>
                             <span className='is-dropdown'>Resume</span>
                         </NavLink>
                         <a href="https://github.com/ZachYarbrough/zachyarbrough.github.io" target='_' className="dropdown-item is-dropdown">

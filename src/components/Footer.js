@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <FadeIn className='content footer'>
             <div className='content d-sm-flex d-none justify-content-between'>
-                <p className='text-muted mt-20'>© 2021 Zach Yarbrough. All Rights Reserved.</p>
+                <p className='text-muted mt-20'>© 2024 Zach Yarbrough. All Rights Reserved.</p>
                 <ul className='mt-15 font-size-18 text-muted'>
                     <a href='https://github.com/ZachYarbrough' target='_' className='mr-5 text-muted' data-toggle="tooltip" data-title="Github">
                         <i className='fa-brands fa-github-square'></i>
