@@ -48,7 +48,7 @@ const Resume = (props) => {
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Projects</h2>
                 <div>
                     <span className='font-size-18 font-weight-bold'>{currentProjects[0].name}</span>
-                    <Link to={`/resume/${currentProjects[1].name.toLowerCase()} https://drive.google.com/file/d/1rbJJfEitoWw4tBvx15CGtDEwFWq2dtD4/view`} onClick={() => {
+                    <Link to={`/resume/${currentProjects[0].name.toLowerCase()}`} onClick={() => {
                         setBreadcrumbState('Resume');
                     }} className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
                         <span className='mr-5'>More Info</span>
@@ -61,13 +61,13 @@ const Resume = (props) => {
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
-                    {/* <p className='d-flex align-items-start'>
+                    <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Source</span>
-                        <a href={currentProjects[1].source} target='_'>
-                            <span className='mr-5 link text-break'>{currentProjects[1].source}</span>
+                        <a href={currentProjects[0].source} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[0].source}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
-                    </p> */}
+                    </p>
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-5 py-0 px-5'>Stack</span>
                         <span className='d-flex flex-wrap'>
@@ -76,7 +76,7 @@ const Resume = (props) => {
                             ))}
                         </span>
                     </p>
-                    <Link to={`/resume/${currentProjects[1].name.toLowerCase()}`} onClick={() => {
+                    <Link to={`/resume/${currentProjects[0].name.toLowerCase()}`} onClick={() => {
                         setBreadcrumbState('Resume');
                     }} className='btn btn-block font-weight-bold d-sm-none d-block'>
                         <span className='mr-5'>More Info</span>
