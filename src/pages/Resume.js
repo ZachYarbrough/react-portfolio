@@ -47,7 +47,7 @@ const Resume = (props) => {
             <div className='d-flex flex-column'>
                 <h2 className='font-size-24 font-weight-bold border-bottom'>Projects</h2>
                 <div>
-                    <span className='font-size-18 font-weight-bold'>{currentProjects[1].name}</span>
+                    <span className='font-size-18 font-weight-bold'>{currentProjects[0].name}</span>
                     <Link to={`/resume/${currentProjects[1].name.toLowerCase()} https://drive.google.com/file/d/1rbJJfEitoWw4tBvx15CGtDEwFWq2dtD4/view`} onClick={() => {
                         setBreadcrumbState('Resume');
                     }} className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
@@ -56,8 +56,8 @@ const Resume = (props) => {
                     </Link>
                     <p className='d-flex align-items-start link-wrapper'>
                         <span className='alert alert-primary mr-10 py-0 px-5'>Website</span>
-                        <a href={currentProjects[1].website} target='_'>
-                            <span className='mr-5 link text-break'>{currentProjects[1].website}</span>
+                        <a href={currentProjects[0].website} target='_'>
+                            <span className='mr-5 link text-break'>{currentProjects[0].website}</span>
                             <i className='fa fa-external-link-alt' aria-hidden="true"></i>
                         </a>
                     </p>
@@ -71,7 +71,7 @@ const Resume = (props) => {
                     <p className='d-flex align-items-start'>
                         <span className='alert alert-primary mr-5 py-0 px-5'>Stack</span>
                         <span className='d-flex flex-wrap'>
-                            {currentProjects[1].stack.map((stack) => (
+                            {currentProjects[0].stack.map((stack) => (
                                 <span key={stack} className="alert mr-5 py-0 px-5">{stack}</span>
                             ))}
                         </span>
