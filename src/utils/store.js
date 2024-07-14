@@ -13,7 +13,7 @@ const initialState = {
     currentProjects: [
         {
           name: '10K Cards',
-          link: '10kCards',
+          link: '10kcards',
           shortDescription: "Digital Busniess Cards for Professionals",
           description: "Freelance work for the company 10k Cards. They wanted an edit form that is similar to their product so I recreated it with interactive inputs and I also integrated stripe payments and a checkout.",
           website: 'https://10k-cards.vercel.app',

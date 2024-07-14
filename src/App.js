@@ -19,12 +19,12 @@ import NoMatch from './pages/NoMatch';
 import reploy1 from './assets/images/reploy/1.png';
 import reploy2 from './assets/images/reploy/2.png';
 import weatherDashboard1 from './assets/images/weatherDashboard/1.png';
-import cards1 from './assets/images/10kCards/1.png';
-import cards2 from './assets/images/10kCards/2.png';
-import cards3 from './assets/images/10kCards/3.png';
-import cards4 from './assets/images/10kCards/4.png';
-import cards5 from './assets/images/10kCards/5.png';
-import cards6 from './assets/images/10kCards/6.png';
+import cards1 from './assets/images/10kcards/1.png';
+import cards2 from './assets/images/10kcards/2.png';
+import cards3 from './assets/images/10kcards/3.png';
+import cards4 from './assets/images/10kcards/4.png';
+import cards5 from './assets/images/10kcards/5.png';
+import cards6 from './assets/images/10kcards/6.png';
 
 function App() {
 
@@ -35,7 +35,7 @@ function App() {
   const currentProjects = [
     {
       name: '10K Cards',
-      link: '10kCards',
+      link: '10kcards',
       shortDescription: "Digital Busniess Cards for Professionals",
       description: "Freelance work for the company 10k Cards. They wanted an edit form that is similar to their product so I recreated it with interactive inputs and I also integrated stripe payments and a checkout.",
       website: 'https://10k-cards.vercel.app',
