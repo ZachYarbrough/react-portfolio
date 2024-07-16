@@ -8,22 +8,23 @@ const ScrollButton = (props) => {
         topBtnVisible
     } = props;
 
-    const scrollTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    const scrollTop = (e) => {
+        e.preventDefault()
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
 
     return (
         <FadeIn className='scroll-to-top text-center d-flex align-items-start justify-content-center'>
-            <div id='topBtn' className={`px-10 pointer scroll-to-top mt-10 ${topBtnVisible && 'show'}`} onClick={topBtnVisible ? scrollTop : undefined}>
+            {topBtnVisible && <div id='topBtn' className='px-10 pointer scroll-to-top mt-10' onMouseDown={(e) => scrollTop(e)}>
                 {topBtnVisible && (
                     <div>
                         <i className='fa fa-angle-up mb-5'></i><br />
                         <span>Back to Top</span>
                     </div>
                 )}
-            </div>
+            </div>}
         </FadeIn>
-    );
+    )
 }
 
 export default ScrollButton;

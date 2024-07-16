@@ -30,7 +30,7 @@ const Footer = () => {
                         <i className='fa fa-envelope-square'></i>
                     </a>
                 </ul>
-                <p className='text-muted font-size-14 mt-0'>© 2021 Zach Yarbrough. All Rights Reserved.</p>
+                <p className='text-muted font-size-14 mt-0'>© 2024 Zach Yarbrough. All Rights Reserved.</p>
             </div>
         </FadeIn>
     );

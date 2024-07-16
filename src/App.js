@@ -116,7 +116,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(breadcrumbState);
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
