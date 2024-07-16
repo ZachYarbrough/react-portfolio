@@ -23,8 +23,10 @@ const Navbar = (props) => {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && darkModeBtn === '') {
             handleDarkMode();
             halfmoon.toggleDarkMode();
+        } else if (darkModeBtn === '') {
+            setDarkModeBtn('fa-moon')
         }
-    })
+    }, [])
 
     return (
         <nav className='navbar'>
