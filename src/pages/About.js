@@ -16,7 +16,7 @@ const About = (props) => {
                 <p className='d-flex align-items-start'><span className='alert alert-primary mr-5 py-0 px-5'>2021</span> <span>Began Work as a Freelance Developer</span></p>
                 <p className='d-flex align-items-start'><span className='alert alert-primary mr-5 py-0 px-5'>2022</span> <span>Began Work at 2U Education as a Teaching Assistant</span></p>
                 <p className='d-flex align-items-start'><span className='alert alert-primary mr-5 py-0 px-5'>2022</span> <span>Began Work at Idea Entity as a Front End Web Developer</span></p>
-
+                
                 <Link to='/work' className='btn btn-block font-weight-bold' aria-label="my work">
                     <span className='mr-5'>My Work</span>
                     <i className='fa fa-angle-right font-size-12' aria-hidden='true' />

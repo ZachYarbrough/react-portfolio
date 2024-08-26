@@ -134,7 +134,7 @@ const Resume = (props) => {
                     <span>Graduated with a GPA of 3.51 with a concentration in Game Design and a Certificate in Radio Television and Film</span>
                 </div>
                 <div className='mt-10'>
-                    <span className='font-size-18 font-weight-bold'>Bootcamp Certificate</span>
+                    <span className='font-size-18 font-weight-bold'>Full Stack Coding Bootcamp</span>
                     <a href={`https://drive.google.com/file/d/1rbJJfEitoWw4tBvx15CGtDEwFWq2dtD4/view`} target='_' className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
                         <span className='mr-5'>View Credential</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
@@ -147,6 +147,29 @@ const Resume = (props) => {
                         <span>A 24-week intensive program focused on gaining technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handelbars.js &amp; ReactJS</span>
                     </div>
                     <a href={`https://drive.google.com/file/d/1rbJJfEitoWw4tBvx15CGtDEwFWq2dtD4/view`} target='_' className='btn btn-block font-weight-bold d-sm-none d-block mt-10'>
+                        <span className='mr-5'>View Credential</span>
+                        <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
+                    </a>
+                </div>
+            </div>
+
+            {/* Education */}
+            <div className='d-flex flex-column'>
+                <h2 className='font-size-24 font-weight-bold border-bottom'>Certificates</h2>
+
+                <div className='mt-10'>
+                    <span className='font-size-18 font-weight-bold'>AWS Certified Cloud Practitioner</span>
+                    <a href={`https://www.credly.com/badges/34b39258-d006-4617-afd9-510b036ac03a/linked_in_profile`} target='_' className='ml-10 btn font-weight-bold d-none d-sm-inline-block'>
+                        <span className='mr-5'>View Credential</span>
+                        <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
+                    </a>
+                    <div className='d-flex flex-column align-items-start'>
+                        <p className='d-flex align-items-start flex-wrap'>
+                            <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Issued Aug 2024</span>
+                            <span className='alert alert-primary mt-5 mr-5 py-0 px-5'>Expires Aug 2027</span>
+                        </p>
+                    </div>
+                    <a href={`https://www.credly.com/badges/34b39258-d006-4617-afd9-510b036ac03a/linked_in_profile`} target='_' className='btn btn-block font-weight-bold d-sm-none d-block mt-10'>
                         <span className='mr-5'>View Credential</span>
                         <i className='fa fa-angle-right font-size-12' aria-hidden='true' />
                     </a>
