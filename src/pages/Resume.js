@@ -109,7 +109,7 @@ const Resume = (props) => {
                     <p className='d-flex align-items-start flex-wrap'>
                         <span className='alert alert-primary mr-5 py-0 px-5'>2021 - 2022</span>
                     </p>
-                    <span>Work on the back end of projects using the MERN stack, primarily focusing on MongoDB, GraphQL, and Express</span>
+                    <span>Work with clients to build and deploy full stack applications using the MERN stack.</span>
                 </div>
                 <span className='font-size-18 font-weight-bold mt-10'>StoryFit - Screenplay Analyist</span>
                 <div className='d-flex flex-column align-items-start'>
