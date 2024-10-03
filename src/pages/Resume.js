@@ -94,7 +94,7 @@ const Resume = (props) => {
                         <span className='alert alert-primary mr-5 py-0 px-5'>Full-Time</span>
                         <span className='alert alert-primary mr-5 py-0 px-5'>Aug 2022 - Present</span>
                     </p>
-                    <span>Assist students enrolled in the UT Coding Bootcamp and answer questions pertaining to full stack development</span>
+                    <span>Build dynamic and responsive web applications for government entities using React, JavaScript, Docker, and Azure, ensuring high-performance and accessibility across platforms</span>
                 </div>
                 <span className='font-size-18 font-weight-bold mt-10'>2U Education - Teaching Assistant</span>
                 <div className='d-flex flex-column align-items-start'>
